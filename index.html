@@ -1,9 +1,216 @@
-<!DOCTYPE html>
-<html>
+<head>
+	<title>Hugo Michel | Sumishi</title>
 
-<body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-</body>
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">
+</head>
 
-</html>
+
+<main>
+	About me
+	<div class="hover-box" href="#about" onclick="Show('about')"><a>Me</a></div>
+	<div class="hover-box" href="#socials" onclick="Show('socials')"><a>Socials</a></div>
+	<div class="hover-box" href="#education" onclick="Show('education')"><a>Education</a></div>
+	<div class="hover-box" href="#contact" onclick="Show('contact')"><a>Contact</a></div>
+	Programming
+	<div class="hover-box" href="#skills" onclick="Show('skills')"><a>My skills</a></div>
+	<div class="hover-box" href="#gamedev" onclick="Show('gamedev')"><a>Game dev</a></div>
+	<div class="hover-box" href="#software" onclick="Show('software')"><a>Software Engineering</a></div>
+	<div class="hover-box" href="#web" onclick="Show('web')"><a>Web design</a></div>
+	My projects
+	<div class="hover-box" href="#beerylis" onclick="Show('beerylis')"><a>Beerylis</a></div>
+	<div class="hover-box" href="#pyrite" onclick="Show('pyrite')"><a>Pyrite Engine</a></div>
+	<div class="hover-box" href="#snakepy" onclick="Show('snakepy')"><a>Snake.py</a></div>
+	Projects I've worked on
+	<div class="hover-box" href="#geckoparty" onclick="Show('geckoparty')"><a>Gecko Party</a></div>
+	<div class="hover-box" href="#stellaria" onclick="Show('stellaria')"><a>Stellaria</a></div>
+	<div class="hover-box" href="#hydreomiel" onclick="Show('hydreomiel')"><a>Hydre'O'Miel</a></div>
+	<div class="hover-box" href="#daisysquest" onclick="Show('daisysquest')"><a>Daisy's Quest</a></div>
+	<div class="hover-box" href="#defendthekingdom" onclick="Show('defendthekingdom')"><a>Defend The Kingdom</a></div>
+	<div class="hover-box" href="#ishikoridome" onclick="Show('ishikoridome')"><a>Le disciple d'Ishikori-Dome</a></div>
+
+	
+	
+	<!-- About Me -->
+	<div class="window" id="about" title="About me">
+		<div class="window-button window-close" onclick="Hide('about')">X</div>
+		<p>
+			Hi! I'm Hugo Michel (AKA Sumishi), I'm french and love developing any type of things!
+		</p>
+
+		<p>
+			
+		</p>
+	</div>
+
+	<!-- Socials -->
+	<div class="window hidden" id="socials" title="Social Media">
+		<div class="window-button window-close" onclick="Hide('socials')">X</div>
+		<p>
+			<div>GitHub</div>
+			<div>Itch.io</div>
+			<div>Linked In</div>
+			<div>Instagram</div>
+			<div>Twitter</div>
+			<div>Discord</div>
+		</p>
+	</div>
+
+	<!-- Education -->
+	<div class="window hidden" id="education" title="Education">
+		<div class="window-button window-close" onclick="Hide('education')">X</div>
+		<p>
+			I'm currently on my 4th year at Creajeux and will get my diploma this year
+		</p>
+	</div>
+
+	<!-- Contact -->
+	<div class="window hidden" id="contact" title="Contact">
+		<div class="window-button window-close" onclick="Hide('contact')">X</div>
+		<p>
+			You can contact me on any of my social medias, but I mainly use those
+			
+			<div>Mail</div>
+			<div>Instagram</div>
+			<div>Discord</div>
+		</p>
+	</div>
+
+	<!-- Skills -->
+	<div class="window hidden" id="skills" title="My skills">
+		<div class="window-button window-close" onclick="Hide('skills')">X</div>
+		<div>
+			Programming languages :
+			<!-- Use images with tooltip -->
+			C++ / C# / HTML / CSS / JavaScript
+		</div>
+		<div>
+			Game engines :
+			<!-- Use images with tooltip -->
+			Unreal Engine 5 / Unity / Godot
+		</div>
+		<div>
+			Frameworks :
+			<!-- Use images with tooltip -->
+			.NET MAUI / ASP.NET Blazor / MonoGame / FNA
+		</div>
+	</div>
+
+	<!-- Skills -->
+	<div class="window hidden" id="gamedev" title="Game dev">
+		<div class="window-button window-close" onclick="Hide('gamedev')">X</div>
+		I studied game developement at Creajeux for 4 years 
+	</div>
+
+	<!-- Software Engineering -->
+	<div class="window hidden" id="software" title="Software Engineering">
+		<div class="window-button window-close" onclick="Hide('software')">X</div>
+		I learned web developement for Beerylis
+	</div>
+
+	<!-- Web design -->
+	<div class="window hidden" id="web" title="Web design">
+		<div class="window-button window-close" onclick="Hide('web')">X</div>
+		I learned web developement for Beerylis at first and keep doing it as a hobby
+	</div>
+
+	<!-- Beerylis -->
+	<div class="window hidden" id="beerylis" title="Beerylis">
+		<div class="window-button window-close" onclick="Hide('beerylis')">X</div>
+		WIP - Made for my 4th year thesis project
+		Made in C#, HTML, CSS with .NET MAUI and ASP.NET Blazor
+		<p>
+			Beerylis is a beekeeping management software originally made for my father
+		</p>
+		<!-- Beerylis website link -->
+		<!-- Le Rucher des escaunes website link -->
+	</div>
+
+	<!-- Pyrite Engine -->
+	<div class="window hidden" id="pyrite" title="Pyrite Engine">
+		<div class="window-button window-close" onclick="Hide('pyrite')">X</div>
+		WIP - Made on my free time
+		Made in C++ 
+		<!-- Github link -->
+	</div>
+
+	<!-- Snake.py -->
+	<div class="window hidden" id="snake" title="Snake.py">
+		<div class="window-button window-close" onclick="Hide('snake')">X</div>
+		Made during my 1st year at Creajeux
+		Made in Lua with LOVE 2D
+		<p>
+			A classic snake game made for a class project in 2 weeks
+		</p>
+		<!-- itch io link -->
+	</div>
+
+	<!-- Gecko Party -->
+	<div class="window hidden" id="geckoparty" title="Gecko Party">
+		<div class="window-button window-close" onclick="Hide('geckoparty')">X</div>
+		Made during my 3rd year at Creajeux
+		Gecko Party is a local multiplayer party game made with Unity in 1 months with a team of 5 devs and 3 artists
+
+		<p>
+			Trailer
+			<iframe width="420" height="315"
+					src="https://www.youtube.com/watch?v=X39tJUiFqlo">
+			</iframe>
+		</p>
+	</div>
+	
+	<!-- Stellaria -->
+	<div class="window hidden" id="stellaria" title="Stellaria">
+		<div class="window-button window-close" onclick="Hide('stellaria')">X</div>
+		Made during my 2nd year at Creajeux
+		Stellaria is a platformer sandbox game made in C++ using the SFML graphic library in 1 months with a team of 6 devs and 3 artists
+		Greatly inspired by Terraria and Starbound
+
+		<p>
+			Trailer
+			<iframe width="420" height="315"
+					src="https://www.youtube.com/watch?v=ji3UeEr6V-A">
+			</iframe>
+		</p>
+	</div>
+	
+	<!-- Hydre'O'Miel -->
+	<div class="window hidden" id="hydreomiel" title="Hydre'O'Miel">
+		<div class="window-button window-close" onclick="Hide('hydreomiel')">X</div>
+		Made during my 2nd year at Creajeux
+		Hydre'O'Miel is a card game made in C++ using the SFML graphic library in 1 months with a team of 6 devs and 5 artists
+	</div>
+	
+	<!-- Daisy's Quest -->
+	<div class="window hidden" id="daisysquest" title="Daisy's Quest">
+		<div class="window-button window-close" onclick="Hide('daisysquest')">X</div>
+		Made during my 1st year at Creajeux
+		Daisy's Quest is a rpg game made in Lua using LOVE 2D in 3 months with a team of 5 devs and 4 artists
+	</div>
+	
+	<!-- Defend The Kingdom -->
+	<div class="window hidden" id="defendthekingdom" title="Defend The Kingdom">
+		<div class="window-button window-close" onclick="Hide('defendthekingdom')">X</div>
+		Made during my 1st year at Creajeux in 2 weeks with a team of 3 devs
+	</div>
+	
+	<!-- Le disciple d'Ishikori-Dome -->
+	<div class="window hidden" id="ishikoridome" title="Le disciple d'Ishikori-Dome">
+		<div class="window-button window-close" onclick="Hide('ishikoridome')">X</div>
+		Made during my 1st year at Creajeux in 2 weeks with a team of 5 devs and 4 artists
+	</div>
+
+	<script>
+		function Hide(id)
+		{
+			var element = document.getElementById(id);
+    		element.style.display = "none";
+		}
+
+		function Show(id)
+		{
+			var element = document.getElementById(id);
+    		element.style.display = "block";
+		}
+	</script>
+
+</main>
