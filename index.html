@@ -1,217 +1,522 @@
 <head>
 	<title>Hugo Michel | Sumishi</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
 </head>
 
 
 <main>
-	About me
-	<div class="hover-box" href="#about" onclick="Show('about')"><a>Me</a></div>
-	<div class="hover-box" href="#socials" onclick="Show('socials')"><a>Socials</a></div>
-	<div class="hover-box" href="#education" onclick="Show('education')"><a>Education</a></div>
-	<div class="hover-box" href="#contact" onclick="Show('contact')"><a>Contact</a></div>
-	Programming
-	<div class="hover-box" href="#skills" onclick="Show('skills')"><a>My skills</a></div>
-	<div class="hover-box" href="#gamedev" onclick="Show('gamedev')"><a>Game dev</a></div>
-	<div class="hover-box" href="#software" onclick="Show('software')"><a>Software Engineering</a></div>
-	<div class="hover-box" href="#web" onclick="Show('web')"><a>Web design</a></div>
-	My projects
-	<div class="hover-box" href="#beerylis" onclick="Show('beerylis')"><a>Beerylis</a></div>
-	<div class="hover-box" href="#pyrite" onclick="Show('pyrite')"><a>Pyrite Engine</a></div>
-	<div class="hover-box" href="#snakepy" onclick="Show('snake')"><a>Snake.py</a></div>
-	Projects I've worked on
-	<div class="hover-box" href="#geckoparty" onclick="Show('geckoparty')"><a>Gecko Party</a></div>
-	<div class="hover-box" href="#stellaria" onclick="Show('stellaria')"><a>Stellaria</a></div>
-	<div class="hover-box" href="#hydreomiel" onclick="Show('hydreomiel')"><a>Hydre'O'Miel</a></div>
-	<div class="hover-box" href="#daisysquest" onclick="Show('daisysquest')"><a>Daisy's Quest</a></div>
-	<div class="hover-box" href="#defendthekingdom" onclick="Show('defendthekingdom')"><a>Defend The Kingdom</a></div>
-	<div class="hover-box" href="#ishikoridome" onclick="Show('ishikoridome')"><a>Le disciple d'Ishikori-Dome</a></div>
+	<div class="left-panel accordion">
 
-	
-	
+		<div class="accordion-item">
+			About me
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#about" onclick="Show('about')">Me</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#socials" onclick="Show('socials')">Socials</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#education" onclick="Show('education')">Education</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#contact" onclick="Show('contact')">Contact</a>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			Programming
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#skills" onclick="Show('skills')">My skills</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#gamedev" onclick="Show('gamedev')">Game dev</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#software" onclick="Show('software')">Software Engineering</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#web" onclick="Show('web')">Web design</a>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			My projects
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#beerylis" onclick="Show('beerylis')">Beerylis</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#snakepy" onclick="Show('snake')">Snake.py</a>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			Projects I've worked on
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#geckoparty" onclick="Show('geckoparty')">Gecko Party</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#stellaria" onclick="Show('stellaria')">Stellaria</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#hydreomiel" onclick="Show('hydreomiel')">Hydre'O'Miel</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#daisysquest" onclick="Show('daisysquest')">Daisy's Quest</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#defendthekingdom" onclick="Show('defendthekingdom')">Defend The
+					Kingdom</a>
+			</div>
+			<div class="hover-box accordion-content">
+				<a class="button popout" href="#ishikoridome" onclick="Show('ishikoridome')">Le disciple
+					d'Ishikori-Dome</a>
+			</div>
+		</div>
+	</div>
+
+ <!-- Draggable DIV -->
+ <div id="mydiv">
+	<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+	<div id="mydivheader">Click here to move</div>
+	<p>Move</p>
+	<p>this</p>
+	<p>DIV</p>
+  </div> 
+
 	<!-- About Me -->
-	<div class="window" id="about" title="About me">
-		<div class="window-button window-close" onclick="Hide('about')">X</div>
-		<p>
-			Hi! I'm Hugo Michel (AKA Sumishi), I'm french and love developing any type of things!
-		</p>
+	<div class="window active" id="about" style="top: 250px; left: 250px;">
+		<div class="window-header" id="aboutheader">
+			<div class="window-title">About Me</div>
+			<div onclick="Hide('about')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
 
-		<p>
-			
-		</p>
+		<div class="window-content about">
+			<p>
+				Hi! I'm Hugo Michel (AKA Sumishi), I'm french and love developing any type of things!
+			</p>
+		</div>
 	</div>
 
 	<!-- Socials -->
-	<div class="window hidden" id="socials" title="Social Media">
-		<div class="window-button window-close" onclick="Hide('socials')">X</div>
-		<p>
-			<div><a href="https://github.com/SumishiM" target="_blank">GitHub</a></div>
-			<div><a href="https://sumishi.itch.io/" target="_blank">Itch.io</a></div>
-			<div><a href="https://www.linkedin.com/in/hugo-michel-sumishi/" target="_blank">LinkedIn</a></div>
-			<div>Instagram</div>
-			<div>Twitter</div>
-			<div>Discord</div>
-		</p>
+	<div class="window active" id="socials" title="Social Media" style="top: 50px; left: 50px;">
+		<div class="window-header draggable" id="socialsheader">
+			<div class="window-title">Socials</div>
+			<div onclick="Hide('socials')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content socials">
+			<div class="hover-box">
+				<a class="button popout icon github" href="https://github.com/SumishiM" target="_blank">
+					<img src="images/github.png" alt="GitHub" width="25" height="25" />
+				</a>
+			</div>
+			<div class="hover-box">
+				<a class="button popout icon itchio" href="https://sumishi.itch.io/" target="_blank">
+					<img src="images/itch.io.png" alt="Itch.io" width="25" height="25" />
+				</a>
+			</div>
+			<div class="hover-box">
+				<a class="button popout icon linkedin" href="https://www.linkedin.com/in/hugo-michel-sumishi/"
+					target="_blank">
+					<img src="images/linkedin.png" alt="LinkedIn" width="25" height="25" />
+				</a>
+			</div>
+			<div class="hover-box">
+				<a class="button popout icon instagram" target="_blank">
+					<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
+				</a>
+			</div>
+			<div class="hover-box">
+				<a class="button popout icon twitter" target="_blank">
+					<img src="images/twitter.png" alt="Twitter" width="25" height="25" />
+				</a>
+			</div>
+			<div class="hover-box">
+				<a class="button popout icon discord" target="_blank">
+					<img src="images/discord.png" alt="Discord" width="25" height="25" />
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<!-- Education -->
-	<div class="window hidden" id="education" title="Education">
-		<div class="window-button window-close" onclick="Hide('education')">X</div>
-		<p>
-			I'm currently on my 4th year at Creajeux and will get my diploma this year
-		</p>
+	<div class="window" id="education" title="Education">
+		<div class="window-header">
+			<div class="window-title">Education</div>
+			<div onclick="Hide('education')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content education">
+			<p>
+				I'm currently on my 4th year at Creajeux and will get my diploma this year
+			</p>
+		</div>
 	</div>
 
 	<!-- Contact -->
-	<div class="window hidden" id="contact" title="Contact">
-		<div class="window-button window-close" onclick="Hide('contact')">X</div>
-		<p>
-			You can contact me on any of my social medias, but I mainly use those
-			
-			<div>Mail</div>
-			<div>Instagram</div>
-			<div>Discord</div>
-		</p>
+	<div class="window" id="contact" title="Contact">
+		<div class="window-header">
+			<div class="window-title">Contact me</div>
+			<div onclick="Hide('contact')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content contact">
+			<p>
+				You can contact me on any of my social medias, but I mainly use those
+
+			<div class="button popout mail">
+				<img src="images/mail.png" alt="Mail" width="25" height="25" />
+				Mail
+			</div>
+			<div class="button popout instagram">
+				<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
+				Instagram
+			</div>
+			<div class="button popout discord">
+				<img src="images/discord.png" alt="Discord" width="25" height="25" />
+				Discord
+			</div>
+			</p>
+		</div>
+
 	</div>
 
 	<!-- Skills -->
-	<div class="window hidden" id="skills" title="My skills">
-		<div class="window-button window-close" onclick="Hide('skills')">X</div>
-		<div>
-			Programming languages :
-			<!-- Use images with tooltip -->
-			C++ / C# / Lua / HTML / CSS / JavaScript
+	<div class="window" id="skills" title="My skills">
+		<div class="window-header">
+			<div class="window-title">My skills</div>
+			<div onclick="Hide('skills')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
 		</div>
-		<div>
-			Game engines :
-			<!-- Use images with tooltip -->
-			Unreal Engine 5 / Unity / Godot
-		</div>
-		<div>
-			Frameworks :
-			<!-- Use images with tooltip -->
-			.NET MAUI / ASP.NET Blazor / MonoGame / FNA
+
+		<div class="window-content skills">
+			<div>
+				Programming languages :
+				<!-- Use images with tooltip -->
+				C++ / C# / Lua / HTML / CSS / JavaScript
+			</div>
+			<div>
+				Game engines :
+				<!-- Use images with tooltip -->
+				Unreal Engine 5 / Unity / Godot
+			</div>
+			<div>
+				Frameworks :
+				<!-- Use images with tooltip -->
+				.NET MAUI / ASP.NET Blazor / MonoGame / FNA
+			</div>
 		</div>
 	</div>
 
 	<!-- Game dev -->
-	<div class="window hidden" id="gamedev" title="Game dev">
-		<div class="window-button window-close" onclick="Hide('gamedev')">X</div>
-		I studied game developement at Creajeux for 4 years 
+	<div class="window" id="gamedev" title="Game dev">
+		<div class="window-header">
+			<div class="window-title">Game dev</div>
+			<div onclick="Hide('gamedev')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content gamedev">
+			<p>
+				I studied game developement at Creajeux for 4 years
+			</p>
+		</div>
 	</div>
 
 	<!-- Software Engineering -->
-	<div class="window hidden" id="software" title="Software Engineering">
-		<div class="window-button window-close" onclick="Hide('software')">X</div>
-		I learned web developement for Beerylis
+	<div class="window" id="software" title="Software Engineering">
+		<div class="window-header">
+			<div class="window-title">Software Engineering</div>
+			<div onclick="Hide('software')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content software">
+			<p>
+				I learned web developement for Beerylis
+			</p>
+		</div>
 	</div>
 
 	<!-- Web design -->
-	<div class="window hidden" id="web" title="Web design">
-		<div class="window-button window-close" onclick="Hide('web')">X</div>
-		I learned web developement for Beerylis at first and keep doing it as a hobby
+	<div class="window" id="web" title="Web design">
+		<div class="window-header">
+			<div class="window-title">Web design</div>
+			<div onclick="Hide('web')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content web">
+			<p>
+				I learned web developement for Beerylis at first and keep doing it as a hobby
+			</p>
+		</div>
 	</div>
 
 	<!-- Beerylis -->
-	<div class="window hidden" id="beerylis" title="Beerylis">
-		<div class="window-button window-close" onclick="Hide('beerylis')">X</div>
-		WIP - Made for my 4th year thesis project
-		Made in C#, HTML, CSS with .NET MAUI and ASP.NET Blazor
-		<p>
-			Beerylis is a beekeeping management software originally made for my father
-		</p>
-		<!-- Beerylis website link -->
-		<!-- Le Rucher des escaunes website link -->
+	<div class="window" id="beerylis" title="Beerylis">
+		<div class="window-header">
+			<div class="window-title">Beerylis</div>
+			<div onclick="Hide('beerylis')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content beerylis">
+			WIP - Made for my 4th year thesis project
+			Made in C#, HTML, CSS with .NET MAUI and ASP.NET Blazor
+			<p>
+				Beerylis is a beekeeping management software originally made for my father
+			</p>
+			<!-- Beerylis website link -->
+			<!-- Le Rucher des escaunes website link -->
+		</div>
 	</div>
 
 	<!-- Pyrite Engine -->
-	<div class="window hidden" id="pyrite" title="Pyrite Engine">
-		<div class="window-button window-close" onclick="Hide('pyrite')">X</div>
-		WIP - Made on my free time
-		Made in C++ 
-		<!-- Github link -->
+	<div class="window" id="pyrite" title="Pyrite Engine">
+		<div class="window-header">
+			<div class="window-title">Pyrite Engine</div>
+			<div onclick="Hide('pyrite')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content pyrite">
+			<p>
+				WIP - Made on my free time
+				Made in C++
+				<!-- Github link -->
+			</p>
+		</div>
 	</div>
 
 	<!-- Snake.py -->
-	<div class="window hidden" id="snake" title="Snake.py">
-		<div class="window-button window-close" onclick="Hide('snake')">X</div>
-		Made during my 1st year at Creajeux
-		Made in Lua with LOVE 2D
-		<p>
-			A classic snake game made for a class project in 2 weeks
-		</p>
-		<!-- itch io link -->
-		<div><a href="https://sumishi.itch.io/snakepy" target="_blank">Itch.io</a></div>
+	<div class="window" id="snake" title="Snake.py">
+		<div class="window-header">
+			<div class="window-title">Snake.py</div>
+			<div onclick="Hide('snake')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content snake">
+			Made during my 1st year at Creajeux
+			Made in Lua with LOVE 2D
+			<p>
+				A classic snake game made for a class project in 2 weeks
+			</p>
+			<!-- itch io link -->
+			<div><a href="https://sumishi.itch.io/snakepy" target="_blank">Itch.io</a></div>
+		</div>
 	</div>
 
 	<!-- Gecko Party -->
-	<div class="window hidden" id="geckoparty" title="Gecko Party">
-		<div class="window-button window-close" onclick="Hide('geckoparty')">X</div>
-		Made during my 3rd year at Creajeux
-		Gecko Party is a local multiplayer party game made with Unity in 2 months with a team of 5 devs and 3 artists
+	<div class="window" id="geckoparty" title="Gecko Party">
+		<div class="window-header">
+			<div class="window-title">Gecko Party</div>
+			<div onclick="Hide('geckoparty')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
 
-		<p>
-			Trailer
-			<iframe width="420" height="315"
-					src="https://www.youtube.com/watch?v=X39tJUiFqlo">
-			</iframe>
-		</p>
+		<div class="window-content geckoparty">
+			Made during my 3rd year at Creajeux
+			Gecko Party is a local multiplayer party game made with Unity in 2 months with a team of 5 devs and 3
+			artists
+
+			<p>
+				Trailer
+				<iframe src="https://www.youtube.com/embed/X39tJUiFqlo" frameborder="0" allowfullscreen></iframe>
+			</p>
+		</div>
 	</div>
-	
+
 	<!-- Stellaria -->
-	<div class="window hidden" id="stellaria" title="Stellaria">
-		<div class="window-button window-close" onclick="Hide('stellaria')">X</div>
-		Made during my 2nd year at Creajeux
-		Stellaria is a platformer sandbox game made in C++ using the SFML graphic library in 3 months with a team of 6 devs and 3 artists
-		Greatly inspired by Terraria and Starbound
+	<div class="window" id="stellaria" title="Stellaria">
+		<div class="window-header">
+			<div class="window-title">Stellaria</div>
+			<div onclick="Hide('stellaria')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
 
-		<p>
-			Trailer
-			<iframe width="420" height="315"
-					src="https://www.youtube.com/watch?v=ji3UeEr6V-A">
-			</iframe>
-		</p>
+		<div class="window-content stellaria">
+			<p>
+				Made during my 2nd year at Creajeux
+				Stellaria is a platformer sandbox game made in C++ using the SFML graphic library in 3 months with a
+				team of 6
+				devs and 3 artists
+				Greatly inspired by Terraria and Starbound
+
+			<p>
+				Trailer
+				<iframe src="https://www.youtube.com/embed/ji3UeEr6V-A" frameborder="0" allowfullscreen></iframe>
+			</p>
+			</p>
+		</div>
 	</div>
-	
+
 	<!-- Hydre'O'Miel -->
-	<div class="window hidden" id="hydreomiel" title="Hydre'O'Miel">
-		<div class="window-button window-close" onclick="Hide('hydreomiel')">X</div>
-		Made during my 2nd year at Creajeux
-		Hydre'O'Miel is a card game made in C++ using the SFML graphic library in 1 months with a team of 6 devs and 5 artists
+	<div class="window" id="hydreomiel" title="Hydre'O'Miel">
+		<div class="window-header">
+			<div class="window-title">Hydre'O'Miel</div>
+			<div onclick="Hide('hydreomiel')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content hydreomiel">
+			<p>
+				Made during my 2nd year at Creajeux
+				Hydre'O'Miel is a card game made in C++ using the SFML graphic library in 1 months with a team of 6 devs
+				and 5
+				artists
+			</p>
+		</div>
 	</div>
-	
+
 	<!-- Daisy's Quest -->
-	<div class="window hidden" id="daisysquest" title="Daisy's Quest">
-		<div class="window-button window-close" onclick="Hide('daisysquest')">X</div>
-		Made during my 1st year at Creajeux
-		Daisy's Quest is a rpg game made in Lua using LOVE 2D in 3 months with a team of 5 devs and 4 artists
+	<div class="window" id="daisysquest" title="Daisy's Quest">
+		<div class="window-header">
+			<div class="window-title">Education</div>
+			<div onclick="Hide('daisysquest')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content daisysquest">
+			<p>
+				Made during my 1st year at Creajeux
+				Daisy's Quest is a rpg game made in Lua using LOVE 2D in 3 months with a team of 5 devs and 4 artists
+			</p>
+		</div>
 	</div>
-	
+
 	<!-- Defend The Kingdom -->
-	<div class="window hidden" id="defendthekingdom" title="Defend The Kingdom">
-		<div class="window-button window-close" onclick="Hide('defendthekingdom')">X</div>
-		Made during my 1st year at Creajeux in 2 weeks with a team of 3 devs
+	<div class="window" id="defendthekingdom" title="Defend The Kingdom">
+		<div class="window-header">
+			<div class="window-title">Defend The Kingdom</div>
+			<div onclick="Hide('defendthekingdom')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content defendthekingdom">
+			<p>
+				Made during my 1st year at Creajeux in 2 weeks with a team of 3 devs
+			</p>
+		</div>
 	</div>
-	
+
 	<!-- Le disciple d'Ishikori-Dome -->
-	<div class="window hidden" id="ishikoridome" title="Le disciple d'Ishikori-Dome">
-		<div class="window-button window-close" onclick="Hide('ishikoridome')">X</div>
-		Made during my 1st year at Creajeux in 2 weeks with a team of 5 devs and 4 artists
+	<div class="window" id="ishikoridome" title="Le disciple d'Ishikori-Dome">
+		<div class="window-header">
+			<div class="window-title">Le disciple d'Ishikori-Dome</div>
+			<div onclick="Hide('ishikoridome')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content ishikoridome">
+			<p>
+				Made during my 1st year at Creajeux in 2 weeks with a team of 5 devs and 4 artists
+			</p>
+		</div>
 	</div>
 
 	<script>
-		function Hide(id)
-		{
+		function Hide(id) {
 			var element = document.getElementById(id);
-    		element.style.display = "none";
+			element.classList.remove('active');
 		}
 
-		function Show(id)
-		{
+		function Show(id) {
 			var element = document.getElementById(id);
-    		element.style.display = "block";
+			element.classList.toggle('active');
 		}
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const accordionItems = document.querySelectorAll('.accordion-item');
+
+			accordionItems.forEach(item => {
+				item.addEventListener('click', () => {
+					accordionItems.forEach(otherItem => {
+						if (otherItem !== item && otherItem.classList.contains('active')) {
+							otherItem.classList.remove('active');
+						}
+					});
+
+					item.classList.toggle('active');
+				});
+			});
+		});
+	</script>
+
+	<script>
+		// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("about"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 	</script>
 
 </main>
