@@ -16,9 +16,12 @@
 .window {
 	-webkit-user-drag: element;
 	transform-origin: 50% 50%;
+	
 	display: flex;
 	flex-direction: column;
+
 	resize: both;
+
 	color: var(--border-color);
 	background-color: transparent;
 
@@ -80,7 +83,7 @@
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	gap: 0;
+	gap: 5px;
 
 	max-width: 60ch;
 }
@@ -123,6 +126,7 @@ iframe {
 	color: var(--border-color);
 	border: 2px solid;
 	border-radius: 8px;
+	font-weight: bold;
 
 	box-shadow: 0px 0px;
 
@@ -179,6 +183,16 @@ iframe {
 .mail.popout {
 	color: red;
 	background-color: #FF000010;
+}
+
+.escaunes.popout {
+	color: #FFAA02;
+	background-color: #FFAA0210;
+}
+
+.beerylis.popout {
+	color: #ff6702;
+	background-color: #ff670210;
 }
 
 a {
