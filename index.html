@@ -19,9 +19,6 @@
 				<a class="button popout" onclick="Show('socials')">Socials</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('education')">Education</a>
-			</div>
-			<div class="hover-box accordion-content">
 				<a class="button popout" onclick="Show('contact')">Contact</a>
 			</div>
 		</div>
@@ -90,7 +87,7 @@
 		</div>
 
 		<div class="window-content about">
-			<p>Time at my place : <t id="datetime"></t></p>
+			<p>Time at my place : <span id="datetime"></span></p>
 			<p>
 				<!-- programming -->
 				Hi! I'm Hugo Michel (AKA Sumishi), I'm 21<br>
@@ -159,22 +156,6 @@
 		</div>
 	</div>
 
-	<!-- Education -->
-	<div class="window" id="education" title="Education" style="top: 760px; left: 770px;">
-		<div class="window-header" id="educationheader">
-			<div class="window-title">Education</div>
-			<div onclick="Hide('education')">
-				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
-			</div>
-		</div>
-
-		<div class="window-content education">
-			<p>
-				I'm currently on my 4th year at Creajeux and will get my diploma this year
-			</p>
-		</div>
-	</div>
-
 	<!-- Contact -->
 	<div class="window" id="contact" title="Contact" style="top: 130px; left: 1120px; max-width: 300px">
 		<div class="window-header" id="contactheader">
@@ -221,17 +202,17 @@
 
 		<div class="window-content skills">
 			<div>
-				Programming languages :
+				Programming languages :<br>
 				<!-- Use images with tooltip -->
 				C++ / C# / Lua / HTML / CSS / JavaScript
 			</div>
 			<div>
-				Game engines :
+				Game engines :<br>
 				<!-- Use images with tooltip -->
 				Unreal Engine 5 / Unity / Godot
 			</div>
 			<div>
-				Frameworks :
+				Frameworks :<br>
 				<!-- Use images with tooltip -->
 				.NET MAUI / ASP.NET Blazor / MonoGame / FNA
 			</div>
@@ -529,7 +510,6 @@
 		// Make the DIV element draggable:
 		dragElement(document.getElementById("about"));
 		dragElement(document.getElementById("socials"));
-		dragElement(document.getElementById("education"));
 		dragElement(document.getElementById("contact"));
 		dragElement(document.getElementById("skills"));
 		dragElement(document.getElementById("gamedev"));
@@ -587,20 +567,20 @@
 		}
 	</script>
 
-<script>
-    // Function to update date and time
-    function updateDateTime() {
-        // Get current date and time in France (Central European Time - CET)
-        var currentDate = new Date();
-        var options = { timeZone: 'Europe/Paris' };
-        var formattedDateTime = currentDate.toLocaleTimeString('fr-FR', options);
+	<script>
+		// Function to update date and time
+		function updateDateTime() {
+			// Get current date and time in France (Central European Time - CET)
+			var currentDate = new Date();
+			var options = { timeZone: 'Europe/Paris' };
+			var formattedDateTime = currentDate.toLocaleTimeString('fr-FR', options);
 
-        // Display the date and time on the HTML page
-        document.getElementById('datetime').innerHTML = formattedDateTime;
-    }
+			// Display the date and time on the HTML page
+			document.getElementById('datetime').innerHTML = formattedDateTime;
+		}
 
-    // Call the function initially and set it to update every second (1000 milliseconds)
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-</script>
+		// Call the function initially and set it to update every second (1000 milliseconds)
+		updateDateTime();
+		setInterval(updateDateTime, 1000);
+	</script>
 </main>
