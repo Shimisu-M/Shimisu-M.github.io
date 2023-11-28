@@ -90,9 +90,28 @@
 		</div>
 
 		<div class="window-content about">
+			<p>Time at my place : <t id="datetime"></t></p>
 			<p>
-				Hi! I'm Hugo Michel (AKA Sumishi), I'm french and love developing any type of things!
+				<!-- programming -->
+				Hi! I'm Hugo Michel (AKA Sumishi), I'm 21<br>
+				I'm a french video game programmer, mainly interested in game engine programming, tools and procedural
+				generation but I also love to experimenting all kinds of stuffs for fun or just out of
+				curiosity.<br><br>
+
+				I started programming in 2020 at Creajeux and never stoped since. During my study, I made several cool
+				projects, alone or with a team, last one being <a onclick="Show('geckoparty')"><strong>Gecko
+						Party</strong></a>.<br><br>
+
+				Current projects<br>
+				<a onclick="Show('beerylis')"><strong> Beerylis</strong></a><br>
+				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a>
 			</p>
+			<p>
+				<!-- hobbies -->
+				I enjoy playing video games, my favorite genre being 2D platformers, no matter the difficulty.<br>
+				I also do some beekeeping with my father, to help him most of the time.
+			</p>
+
 		</div>
 	</div>
 
@@ -166,29 +185,27 @@
 		</div>
 
 		<div class="window-content contact">
-			<p>
-				You can contact me on any of my social medias, but I mainly use those
+			You can contact me on any of my social medias, but I mainly use those if you wanna talk with me.
 
-			<div class="hover-box">
-				<a class="button popout mail" target="_blank">
+			<div class="hover-box" title="hugosumishi@gmail.com">
+				<a class="button popout mail" href="mailto:hugosumishi@gmail.com" target="_blank">
 					<img src="images/mail.png" alt="E-mail" width="25" height="25" />
 					E-mail
 				</a>
 			</div>
-			<div class="hover-box">
-				<a class="button popout instagram" target="_blank">
-					<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
-					Instagram
-				</a>
-			</div>
-			<div class="hover-box">
+			<div class="hover-box" title="LinkedIn">
 				<a class="button popout linkedin" href="https://www.linkedin.com/in/hugo-michel-sumishi/"
 					target="_blank">
 					<img src="images/linkedin.png" alt="LinkedIn" width="25" height="25" />
 					LinkedIn
 				</a>
 			</div>
-			</p>
+			<div class="hover-box" title="Instagram">
+				<a class="button popout instagram" target="_blank">
+					<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
+					Instagram
+				</a>
+			</div>
 		</div>
 
 	</div>
@@ -248,7 +265,7 @@
 
 		<div class="window-content software">
 			<p>
-				I learned web developement for Beerylis
+				I learned web developement for Beerylis.
 			</p>
 		</div>
 	</div>
@@ -264,7 +281,7 @@
 
 		<div class="window-content web">
 			<p>
-				I learned web developement for Beerylis at first and keep doing it as a hobby
+				I learned web developement for Beerylis Interfaces at first and kept doing it as a hobby.
 			</p>
 		</div>
 	</div>
@@ -281,7 +298,7 @@
 		<div class="window-content beerylis">
 			<div><strong>Work in progress ...</strong></div>
 			<div>
-				Beerylis is a beekeeping management software originally made for my father.
+				Beerylis is a <strong>beekeeping management software</strong> originally made for my father.
 				Then I realized it would be a usefull tool for other beekeepers and started working on it to make the
 				best software I can.
 			</div>
@@ -366,8 +383,7 @@
 	</div>
 
 	<!-- Gecko Party -->
-	<div class="window" id="geckoparty" title="Gecko Party"
-	style="top: 370px; left: 830px;">
+	<div class="window" id="geckoparty" title="Gecko Party" style="top: 370px; left: 830px;">
 		<div class="window-header" id="geckopartyheader">
 			<div class="window-title">Gecko Party</div>
 			<div onclick="Hide('geckoparty')">
@@ -388,8 +404,7 @@
 	</div>
 
 	<!-- Stellaria -->
-	<div class="window" id="stellaria" title="Stellaria"
-	style="top: 180px; left: 190px;">
+	<div class="window" id="stellaria" title="Stellaria" style="top: 180px; left: 190px;">
 		<div class="window-header" id="stellariaheader">
 			<div class="window-title">Stellaria</div>
 			<div onclick="Hide('stellaria')">
@@ -414,8 +429,7 @@
 	</div>
 
 	<!-- Hydre'O'Miel -->
-	<div class="window" id="hydreomiel" title="Hydre'O'Miel"
-	style="top: 400px; left: 900px;">
+	<div class="window" id="hydreomiel" title="Hydre'O'Miel" style="top: 400px; left: 900px;">
 		<div class="window-header" id="hydreomielheader">
 			<div class="window-title">Hydre'O'Miel</div>
 			<div onclick="Hide('hydreomiel')">
@@ -434,8 +448,7 @@
 	</div>
 
 	<!-- Daisy's Quest -->
-	<div class="window" id="daisysquest" title="Daisy's Quest"
-	style="top: 300px; left: 120px;">
+	<div class="window" id="daisysquest" title="Daisy's Quest" style="top: 300px; left: 120px;">
 		<div class="window-header" id="daisysquestheader">
 			<div class="window-title">Daisy's Quest</div>
 			<div onclick="Hide('daisysquest')">
@@ -452,8 +465,7 @@
 	</div>
 
 	<!-- Defend The Kingdom -->
-	<div class="window" id="defendthekingdom" title="Defend The Kingdom"
-	style="top: 175px; left: 875px;">
+	<div class="window" id="defendthekingdom" title="Defend The Kingdom" style="top: 175px; left: 875px;">
 		<div class="window-header" id="defendthekingdomheader">
 			<div class="window-title">Defend The Kingdom</div>
 			<div onclick="Hide('defendthekingdom')">
@@ -469,8 +481,7 @@
 	</div>
 
 	<!-- Le disciple d'Ishikori-Dome -->
-	<div class="window" id="ishikoridome" title="Le disciple d'Ishikori-Dome"
-	style="top: 450px; left: 120px;">
+	<div class="window" id="ishikoridome" title="Le disciple d'Ishikori-Dome" style="top: 450px; left: 120px;">
 		<div class="window-header" id="ishikoridomeheader">
 			<div class="window-title">Le disciple d'Ishikori-Dome</div>
 			<div onclick="Hide('ishikoridome')">
@@ -576,4 +587,20 @@
 		}
 	</script>
 
+<script>
+    // Function to update date and time
+    function updateDateTime() {
+        // Get current date and time in France (Central European Time - CET)
+        var currentDate = new Date();
+        var options = { timeZone: 'Europe/Paris' };
+        var formattedDateTime = currentDate.toLocaleTimeString('fr-FR', options);
+
+        // Display the date and time on the HTML page
+        document.getElementById('datetime').innerHTML = formattedDateTime;
+    }
+
+    // Call the function initially and set it to update every second (1000 milliseconds)
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
 </main>
