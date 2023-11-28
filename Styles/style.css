@@ -1,22 +1,34 @@
 * {
 	scroll-behavior: smooth;	
+
+	--border-color: #5a5c90;
+	--shadow-color: #5a5c9054;
+	--header: #B1B2FF;
+	--button: #AAC4FF;
+	--sub-header: #D2DAFF;
+	--background-color: #EEF1FF;
+	--background-white-color: rgb(241, 237, 243);
+	--window-color: #f8f8f8;
 }
 
-.window {
-	margin: 10px;
-	-webkit-user-drag: element;
 
+
+.window {
+	-webkit-user-drag: element;
+	transform-origin: 50% 50%;
 	display: flex;
 	flex-direction: column;
 	resize: both;
-	background-color: white;
+	color: var(--border-color);
+	background-color: transparent;
+
 
 	max-height: 0px;
 	max-width: 0px;
 	position: absolute;
 	z-index: 9;
 
-	border: 2px solid black;
+	border: 2px solid;
 	box-shadow: transparent;
 	border-color: transparent;
 	border-radius: 8px;
@@ -28,14 +40,18 @@
 			max-height 0.3s ease-in-out, 
 			max-width 0.3s ease-in-out,
 			box-border 0.3s ease-in-out, 
+			background-color 0.3s ease-in-out, 
 			border-color 0.3s ease-in-out; 
 
 	overflow: hidden;
 }
 
 .window.active {
-	border-color: black;
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+	min-width: 20ch;
+	min-height: 100px;
+	background-color: var(--window-color);
+	border-color: var(--border-color);
+	box-shadow: 8px 8px 0px var(--shadow-color);
 	max-height: 1000px;
 	max-width: 1000px;
 	display: flex;
@@ -44,14 +60,16 @@
 
 
 .window-header {
-	padding: 0px;
+	padding-left: 10px;
+	background-color: var(--header);
 	display: flex;
 	cursor: move;
 	justify-content: space-between;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid var(--border-color);
 }
 
 .window-title {
+	font-weight: bold;
 	margin: 2px;
 	align-self: flex-start;
 	display: block;
@@ -74,9 +92,9 @@
 .window-button.window-close {
 	cursor: pointer;
 	padding: 3px;
-	border-left: 2px solid black;
+	border-left: 2px solid var(--border-color);
 	border-top-right-radius: 6px;
-	background-color: rgb(223, 24, 47);
+	background-color: rgb(207, 72, 88);
 }
 
 .window.hidden {
@@ -85,7 +103,7 @@
 
 iframe {
 	aspect-ratio: 16/9;
-	max-width: 100%;
+	width: 100%;
 }
 
 .button {
@@ -99,10 +117,10 @@ iframe {
 	height: 25px;
 	max-width: 250px;
 
-	background-color: #FFF;
+	background-color: var(--background-color);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-	color: black;
+	color: var(--border-color);
 	border: 2px solid;
 	border-radius: 8px;
 
@@ -130,30 +148,37 @@ iframe {
 
 .github.popout  {
 	color: black;
+	background-color: #00000010;
 }
 
 .itchio.popout {
 	color: #FA5C5C;
+	background-color: #FA5C5C10;
 }
 
 .linkedin.popout {
 	color: #007EBB;
+	background-color: #007dbb10;
 }
 
 .instagram.popout {
 	color: rgba(255,0,168,1);
+	background-color: rgba(255,0,168,.1);
 }
 
 .twitter.popout {
 	color: black;
+	background-color: #00000010;
 }
 
 .discord.popout {
 	color: #5865F2;
+	background-color: #5865F210;
 }
 
 .mail.popout {
 	color: red;
+	background-color: #FF000010;
 }
 
 a {
@@ -161,64 +186,60 @@ a {
 }
 
 body {
+	
+	background-color: var(--background-white-color);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #f8f8f8;
-	color: #333;
+	color: var(--border-color);
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: end;
 	height: 100vh;
 	margin: 0;
-  }
+}
 
-  .accordion {
+.accordion {
+	margin-right: 2em;
 	width: 300px;
-  }
+	align-self: end;
+}
 
-  .accordion-item {
-	background-color: #fff;
-	margin-bottom: 1px;
+.accordion-item {
+	background-color: var(--background-color);
+	margin-bottom: 5px;
 	cursor: pointer;
+	font-size: 1.2rem;
 	padding: 16px;
+
+	border-radius: 8px;
+	border: 2px solid var(--border-color);
+
 	text-align: left;
 	font-weight: bold;
-	border: 1px solid #ddd;
-	transition: background-color 0.3s, color 0.3s;
-  }
+	transition: 
+		background-color 0.3s, 
+		color 0.3s;
+}
 
-  .accordion-item:hover {
-	background-color: #f0f0f0;
-  }
+.accordion-item:hover {
+	background-color: var(--background-color);
+}
 
-  .accordion-content {
+.accordion-content {
+	font-size: 1rem;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-  }
+	transition: 
+		max-height 0.5s ease-in-out, 
+		padding 0.3s ease-in-out;
+}
 
-  .accordion-item.active {
-	background-color: #e0e0e0;
-	color: #555;
-  }
+.accordion-item.active {
+	background-color: var(--sub-header);
+	color: var(--border-color);
+}
 
-  .accordion-item.active .accordion-content {
+.accordion-item.active .accordion-content {
 	max-height: 500px; /* Set a value based on your content height */
 	padding: 12px;
 	transition-delay: 0.3s; /* Delay the opening transition */
-  }
-
-  #mydiv {
-	position: absolute;
-	z-index: 9;
-	background-color: #f1f1f1;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-  }
-  
-  #mydivheader {
-	padding: 10px;
-	cursor: move;
-	z-index: 10;
-	background-color: #2196F3;
-	color: #fff;
-  }
+}
