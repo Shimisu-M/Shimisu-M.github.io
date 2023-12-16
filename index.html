@@ -42,14 +42,19 @@
 		<div class="accordion-item">
 			My projects
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('beerylis')">Beerylis</a>
+				<a class="button popout" onclick="Show('ignite')">Ignite</a>
 			</div>
 			<div class="hover-box accordion-content">
 				<a class="button popout" onclick="Show('pyrite')">Pyrite Engine</a>
 			</div>
 			<div class="hover-box accordion-content">
+				<a class="button popout" onclick="Show('beerylis')">Beerylis</a>
+			</div>
+			<!--
+			<div class="hover-box accordion-content">
 				<a class="button popout" onclick="Show('snake')">Snake.py</a>
 			</div>
+			-->
 		</div>
 
 		<div class="accordion-item">
@@ -87,23 +92,28 @@
 		</div>
 
 		<div class="window-content about">
-			<p>Time at my place : <span id="datetime"></span></p>
-			<p>
+			<p>Time at my place : <span id="datetime"></span><br><br>
 				<!-- programming -->
 				Hi! I'm Hugo Michel (AKA Sumishi), I'm 21<br>
 				I'm a french video game programmer, mainly interested in game engine programming, tools and procedural
 				generation but I also love to experimenting all kinds of stuffs for fun or just out of
 				curiosity.<br><br>
 
-				I started programming in 2020 at Creajeux and never stoped since. During my study, I made several cool
+				I started programming in 2020 at Creajeux and never stopped since. During my study, I made several cool
 				projects, alone or with a team, last one being <a onclick="Show('geckoparty')"><strong>Gecko
-						Party</strong></a>.<br><br>
+				Party</strong></a>.<br><br>
 
-				Current projects<br>
-				<a onclick="Show('beerylis')"><strong> Beerylis</strong></a><br>
-				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a>
-			</p>
-			<p>
+				Current projects
+				<div class="hover-box" title="Pyrite">
+					<a class="button popout pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
+				</div>
+				<div class="hover-box" title="Ignite">
+					<a class="button popout ignite" onclick="Show('ignite')">Ignite EC Framework</a>
+				</div>
+				<div class="hover-box" title="Beerylis">
+					<a class="button popout beerylis" onclick="Show('beerylis')">Beerylis</a>
+				</div>
+				<br>
 				<!-- hobbies -->
 				I enjoy playing video games, my favorite genre being 2D platformers, no matter the difficulty.<br>
 				I also do some beekeeping with my father, to help him most of the time.
@@ -310,6 +320,34 @@
 		</div>
 	</div>
 
+	<!-- Ignite -->
+	<div class="window" id="ignite" title="Ignite" style="top: 665px; left: 435px;">
+		<div class="window-header" id="igniteheader">
+			<div class="window-title">Ignite EC Framework</div>
+			<div onclick="Hide('ignite')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content ignite">
+			<div><strong>Work in progress ...</strong></div>
+			<div>
+				Ignite is a <strong>C# Entity-Component framework (EC)</strong> I'm making for 
+				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br> 
+				<em>Note : It isn't an ECS framework, also I'll make one at some point</em><br>
+			</div>
+			<div>Here is the GitHub repository if you are interested in it.</div>
+
+			<!-- Ignite github repo link-->
+			<div class="hover-box" title="Ignite repository">
+				<a class="button popout github" href="https://github.com/SumishiM/Ignite" target="_blank">
+					<img src="images/github.png" alt="Github" width="25" height="25" />
+					GitHub
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<!-- Pyrite Engine -->
 	<div class="window" id="pyrite" title="Pyrite Engine" style="top: 360px; left: 725px;">
 		<div class="window-header" id="pyriteheader">
@@ -322,7 +360,8 @@
 		<div class="window-content pyrite">
 			<div><strong>Work in progress ...</strong></div>
 			<div>
-				Pyrite is a <strong>C++ game engine</strong> I'm making on my free time.
+				Pyrite is a <strong>C# game engine</strong> I'm making for my 4th year thesis project for Creajeux.<br>
+				It implement my EC framework <a onclick="Show('ignite')"><strong> Ignite</strong></a><br> 
 			</div>
 			<div>Here is the GitHub repository if you are interested in it.</div>
 
@@ -517,6 +556,7 @@
 		dragElement(document.getElementById("web"));
 		dragElement(document.getElementById("beerylis"));
 		dragElement(document.getElementById("pyrite"));
+		dragElement(document.getElementById("ignite"));
 		dragElement(document.getElementById("snake"));
 		dragElement(document.getElementById("geckoparty"));
 		dragElement(document.getElementById("stellaria"));

@@ -198,9 +198,20 @@ iframe {
 	background-color: #ff670210;
 }
 
+.ignite.popout {
+	color: #f38f59;
+	background-color: #f38f5910;
+}
+
+.pyrite.popout {
+	color: #c4aa52;
+	background-color: #c4aa5210;
+}
+
 a {
 	text-decoration: none;
 }
+
 a:hover {
 	cursor: pointer;
 	text-decoration: underline;
