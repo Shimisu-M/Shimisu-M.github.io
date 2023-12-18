@@ -13,7 +13,7 @@
 		<div class="accordion-item">
 			About me
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('about')">Me</a>
+				<a class="button popout" onclick="Show('about'); Show('aboutprojects')">Me</a>
 			</div>
 			<div class="hover-box accordion-content">
 				<a class="button popout" onclick="Show('socials')">Socials</a>
@@ -27,15 +27,6 @@
 			Programming
 			<div class="hover-box accordion-content">
 				<a class="button popout" onclick="Show('skills')">My skills</a>
-			</div>
-			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('gamedev')">Game dev</a>
-			</div>
-			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('software')">Software Engineering</a>
-			</div>
-			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('web')">Web design</a>
 			</div>
 		</div>
 
@@ -83,7 +74,7 @@
 	</div>
 
 	<!-- About Me -->
-	<div class="window active" id="about" style="top: 200px; left: 450px;">
+	<div class="window active" id="about" style="top: 100px; left: 250px;">
 		<div class="window-header" id="aboutheader">
 			<div class="window-title">About Me</div>
 			<div onclick="Hide('about')">
@@ -101,29 +92,49 @@
 
 				I started programming in 2020 at Creajeux and never stopped since. During my study, I made several cool
 				projects, alone or with a team, last one being <a onclick="Show('geckoparty')"><strong>Gecko
-				Party</strong></a>.<br><br>
+						Party</strong></a>.<br><br>
 
-				Current projects
-				<div class="hover-box" title="Pyrite">
-					<a class="button popout pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
-				</div>
-				<div class="hover-box" title="Ignite">
-					<a class="button popout ignite" onclick="Show('ignite')">Ignite EC Framework</a>
-				</div>
-				<div class="hover-box" title="Beerylis">
-					<a class="button popout beerylis" onclick="Show('beerylis')">Beerylis</a>
-				</div>
-				<br>
+				Most of my projects are available on <a onclick="Show('socials')"><strong>GitHub</strong></a> if you
+				want to
+				check<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 				<!-- hobbies -->
 				I enjoy playing video games, my favorite genre being 2D platformers, no matter the difficulty.<br>
 				I also do some beekeeping with my father, to help him most of the time.
 			</p>
+		</div>
+	</div>
 
+
+	<!-- About projects -->
+	<div class="window active" id="aboutprojects" title="Current projects"
+		style="top: 300px; left: 825px; max-width: 40ch;">
+		<div class="window-header draggable" id="aboutprojectsheader">
+			<div class="window-title">Current projects</div>
+			<div onclick="Hide('aboutprojects')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content about">
+			I like having some variety on what task I can do at a given moment, that's why I have multiples projects
+			running at once.<br><br>
+			<div class="flex-array">
+				<div class="hover-box" title="Pyrite">
+					<a class="button popout pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
+				</div>
+				<div class="hover-box" title="Beerylis">
+					<a class="button popout beerylis" onclick="Show('beerylis')">Beerylis</a>
+				</div>
+				<div class="hover-box" title="Ignite">
+					<a class="button popout ignite" onclick="Show('ignite')">Ignite EC Framework</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<!-- Socials -->
-	<div class="window active" id="socials" title="Social Media" style="top: 500px; left: 1100px;">
+	<div class="window active" id="socials" title="Social Media" style="top: 50px; left: 975px;">
 		<div class="window-header draggable" id="socialsheader">
 			<div class="window-title">Socials</div>
 			<div onclick="Hide('socials')">
@@ -167,7 +178,7 @@
 	</div>
 
 	<!-- Contact -->
-	<div class="window" id="contact" title="Contact" style="top: 130px; left: 1120px; max-width: 300px">
+	<div class="window" id="contact" title="Contact" style="top: 190px; left: 1200px; max-width: 300px">
 		<div class="window-header" id="contactheader">
 			<div class="window-title">Contact me</div>
 			<div onclick="Hide('contact')">
@@ -214,7 +225,7 @@
 			<div>
 				Programming languages :<br>
 				<!-- Use images with tooltip -->
-				C++ / C# / Lua / HTML / CSS / JavaScript
+				C++ / C# / Lua / HTML / CSS
 			</div>
 			<div>
 				Game engines :<br>
@@ -226,54 +237,6 @@
 				<!-- Use images with tooltip -->
 				.NET MAUI / ASP.NET Blazor / MonoGame / FNA
 			</div>
-		</div>
-	</div>
-
-	<!-- Game dev -->
-	<div class="window" id="gamedev" title="Game dev" style="top: 280px; left: 780px;">
-		<div class="window-header" id="gamedevheader">
-			<div class="window-title">Game dev</div>
-			<div onclick="Hide('gamedev')">
-				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
-			</div>
-		</div>
-
-		<div class="window-content gamedev">
-			<p>
-				I studied game developement at Creajeux for 4 years
-			</p>
-		</div>
-	</div>
-
-	<!-- Software Engineering -->
-	<div class="window" id="software" title="Software Engineering" style="top: 540px; left: 120px;">
-		<div class="window-header" id="softwareheader">
-			<div class="window-title">Software Engineering</div>
-			<div onclick="Hide('software')">
-				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
-			</div>
-		</div>
-
-		<div class="window-content software">
-			<p>
-				I learned web developement for Beerylis.
-			</p>
-		</div>
-	</div>
-
-	<!-- Web design -->
-	<div class="window" id="web" title="Web design" style="top: 550px; left: 875px;">
-		<div class="window-header" id="webheader">
-			<div class="window-title">Web design</div>
-			<div onclick="Hide('web')">
-				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
-			</div>
-		</div>
-
-		<div class="window-content web">
-			<p>
-				I learned web developement for Beerylis Interfaces at first and kept doing it as a hobby.
-			</p>
 		</div>
 	</div>
 
@@ -294,10 +257,8 @@
 				best software I can.
 			</div>
 			<div>
-				It's currently my 4th year thesis project for Creajeux.
 				The software is made in <strong>C# HTML and CSS</strong> with the frameworks <strong>.NET MAUI</strong>
-				and <strong>ASP.NET
-					Blazor</strong>.
+				and <strong>ASP.NETBlazor</strong>.
 			</div>
 			<div>
 				Here are the links to the project and my father website.
@@ -332,8 +293,8 @@
 		<div class="window-content ignite">
 			<div><strong>Work in progress ...</strong></div>
 			<div>
-				Ignite is a <strong>C# Entity-Component framework (EC)</strong> I'm making for 
-				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br> 
+				Ignite is a <strong>C# Entity-Component framework (EC)</strong> I'm making for
+				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br>
 				<em>Note : It isn't an ECS framework, also I'll make one at some point</em><br>
 			</div>
 			<div>Here is the GitHub repository if you are interested in it.</div>
@@ -360,8 +321,8 @@
 		<div class="window-content pyrite">
 			<div><strong>Work in progress ...</strong></div>
 			<div>
-				Pyrite is a <strong>C# game engine</strong> I'm making for my 4th year thesis project for Creajeux.<br>
-				It implement my EC framework <a onclick="Show('ignite')"><strong> Ignite</strong></a><br> 
+				Pyrite is a <strong>C# game engine</strong> I'm making my final project at Creajeux.<br>
+				It implement my EC framework <a onclick="Show('ignite')"><strong> Ignite</strong></a><br>
 			</div>
 			<div>Here is the GitHub repository if you are interested in it.</div>
 
@@ -412,14 +373,22 @@
 		</div>
 
 		<div class="window-content geckoparty">
-			Made during my 3rd year at Creajeux
-			Gecko Party is a local multiplayer party game made with Unity in 2 months with a team of 5 devs and 3
-			artists
+			Made during my 3rd year at Creajeux <br>
 
-			<p>
-				Trailer
-				<iframe src="https://www.youtube.com/embed/X39tJUiFqlo" frameborder="0" allowfullscreen></iframe>
-			</p>
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>8</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>2 months</strong></span>
+			</div>
+
+			Gecko Party is a local multiplayer party game made with Unity featuring 8 minigames and a large lobby to
+			explore !<br>
+
+			On this project, I worked on the project architecture and core systems, 2 out of the 8 minigames and a major
+			part of the GUI.<br>
+
+			<iframe src="https://www.youtube.com/embed/X39tJUiFqlo" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 
@@ -433,18 +402,24 @@
 		</div>
 
 		<div class="window-content stellaria">
-			<p>
-				Made during my 2nd year at Creajeux
-				Stellaria is a platformer sandbox game made in C++ using the SFML graphic library in 3 months with a
-				team of 6
-				devs and 3 artists
-				Greatly inspired by Terraria and Starbound
+			Made during my 2nd year at Creajeux
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>9</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>3 months</strong></span>
+			</div>
 
-			<p>
-				Trailer
-				<iframe src="https://www.youtube.com/embed/ji3UeEr6V-A" frameborder="0" allowfullscreen></iframe>
-			</p>
-			</p>
+			<div>
+				Stellaria is a <strong>2D sandbox platformer</strong> game inspired of <strong>Terraria</strong> and
+				<strong>Starbound</strong> made in <strong>C++</strong> using <strong>SFML</strong>.<br>
+				On this project, I worked on the project architecture and the world system from the tiles datas to the
+				procedural generation and rendering.
+			</div>
+
+			<br>
+
+			<iframe src="https://www.youtube.com/embed/ji3UeEr6V-A" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 
@@ -458,12 +433,20 @@
 		</div>
 
 		<div class="window-content hydreomiel">
-			<p>
-				Made during my 2nd year at Creajeux
-				Hydre'O'Miel is a card game made in C++ using the SFML graphic library in 1 months with a team of 6 devs
-				and 5
-				artists
-			</p>
+
+			Made during my 2nd year at Creajeux
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>11</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>1 months</strong></span>
+			</div>
+			<div>
+				Hydre'O'Miel is a <strong>card game</strong> made in <strong>C++</strong> using the
+				<strong>SFML</strong> graphic library<br>
+				On this project, I worked on the game architecture and game design, I also worked on some animations and
+				feedbacks.
+			</div>
 		</div>
 	</div>
 
@@ -477,10 +460,19 @@
 		</div>
 
 		<div class="window-content daisysquest">
-			<p>
-				Made during my 1st year at Creajeux
-				Daisy's Quest is a rpg game made in Lua using LOVE 2D in 3 months with a team of 5 devs and 4 artists
-			</p>
+
+			Made during my 1st year at Creajeux
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>9</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>3 months</strong></span>
+			</div>
+			<div>
+				Daisy's Quest is a <strong>RPG</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
+				On this project, I worked on the map, loading/unloading, imports from Tiled, animated tiles, and level design.
+				I also made some gameplay with the creation of the last boss and the AI of the goblin.
+			</div>
 		</div>
 	</div>
 
@@ -494,9 +486,18 @@
 		</div>
 
 		<div class="window-content defendthekingdom">
-			<p>
-				Made during my 1st year at Creajeux in 2 weeks with a team of 3 devs
-			</p>
+			
+			Made during my 1st year at Creajeux
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>3</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>2 weeks</strong></span>
+			</div>
+			<div>
+				Defend the Kingdom is a <strong>Tower defense</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
+				On this project, I worked on the map system, with tower placement and upgrades, imports from Tiled and level design.
+			</div>
 		</div>
 	</div>
 
@@ -510,9 +511,18 @@
 		</div>
 
 		<div class="window-content ishikoridome">
-			<p>
-				Made during my 1st year at Creajeux in 2 weeks with a team of 5 devs and 4 artists
-			</p>
+			
+			Made during my 1st year at Creajeux
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>9</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>2 weeks</strong></span>
+			</div>
+			<div>
+				Le disciple d'Ishikori-Dome is a <strong>Roguelike</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
+				On this project, I worked on the map system, with the collision system and the procedural generation. I also did some gameplay with the boss AI.
+			</div>
 		</div>
 	</div>
 
@@ -524,7 +534,8 @@
 
 		function Show(id) {
 			var element = document.getElementById(id);
-			element.classList.toggle('active');
+			if (!element.classList.contains('active'))
+				element.classList.add('active');
 		}
 	</script>
 	<script>
@@ -548,12 +559,10 @@
 	<script>
 		// Make the DIV element draggable:
 		dragElement(document.getElementById("about"));
+		dragElement(document.getElementById("aboutprojects"));
 		dragElement(document.getElementById("socials"));
 		dragElement(document.getElementById("contact"));
 		dragElement(document.getElementById("skills"));
-		dragElement(document.getElementById("gamedev"));
-		dragElement(document.getElementById("software"));
-		dragElement(document.getElementById("web"));
 		dragElement(document.getElementById("beerylis"));
 		dragElement(document.getElementById("pyrite"));
 		dragElement(document.getElementById("ignite"));

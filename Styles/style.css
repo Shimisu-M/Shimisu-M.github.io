@@ -27,7 +27,6 @@
 
 
 	max-height: 0px;
-	max-width: 0px;
 	min-height: 0px;
 	min-width: 0px;
 	position: absolute;
@@ -45,10 +44,10 @@
 			max-height 0.3s ease-in-out, 
 			max-width 0.3s ease-in-out,
 			min-height 0.3s ease-in-out, 
-			min-width 0.3s ease-in-out,
 			box-border 0.3s ease-in-out, 
+			border-color 0.5s ease-in, 
 			background-color 0.3s ease-in-out, 
-			border-color 0.3s ease-in-out; 
+			border-radius 0.3s ease-in-out; 
 
 	overflow: hidden;
 }
@@ -60,8 +59,18 @@
 	border-color: var(--border-color);
 	box-shadow: 8px 8px 0px var(--shadow-color);
 	max-height: 1000px;
+	border-radius: 8px;
 	max-width: 1000px;
 	display: flex;
+	
+	transition: 
+			max-height 0.3s ease-in-out, 
+			max-width 0.3s ease-in-out,
+			min-height 0.3s ease-in-out, 
+			box-border 0.3s ease-in-out, 
+			border-color 0.1s ease-in, 
+			background-color 0.3s ease-in-out, 
+			border-radius 0.3s ease-in-out; 
 }
 
 
@@ -83,13 +92,45 @@
 }
 
 .window-content {
-	padding: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 7px;
+	padding-left: 10px;
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
-
+	max-height: 80vh;
+	overflow-y: auto;
+	scroll-behavior: smooth;
 	max-width: 60ch;
 }
+
+/* width */
+.window-content::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  /* Track */
+  .window-content::-webkit-scrollbar-track {
+	border-top: 10px solid transparent; /* Margin on top */
+	border-bottom: 10px solid transparent; /* Margin on bottom */
+	background-color: transparent;
+  }
+  
+  /* Handle */
+  .window-content::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	padding: 10px;
+	background: var(--header);
+  }
+  
+  /* Handle on hover */
+  .window-content::-webkit-scrollbar-thumb:hover {
+	background: var(--border-color);
+  }
 
 .window-content.socials {
 	flex-direction: row;
@@ -110,6 +151,7 @@
 iframe {
 	aspect-ratio: 16/9;
 	width: 100%;
+	border-radius: 8px;
 }
 
 .button {
@@ -217,6 +259,19 @@ a:hover {
 	text-decoration: underline;
 }
 
+.flex-array {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	vertical-align: middle;
+	
+}
+
+.small-icon {
+	color: var(--border-color);
+	flood-color: var(--border-color);
+}
+
 body {
 	
 	background-color: var(--background-white-color);
@@ -227,6 +282,7 @@ body {
 	justify-content: end;
 	height: 100vh;
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 .accordion {
@@ -268,10 +324,11 @@ body {
 .accordion-item.active {
 	background-color: var(--sub-header);
 	color: var(--border-color);
+	padding: -12px;
 }
 
 .accordion-item.active .accordion-content {
 	max-height: 500px; /* Set a value based on your content height */
-	padding: 12px;
+	padding: 4px;
 	transition-delay: 0.3s; /* Delay the opening transition */
 }
