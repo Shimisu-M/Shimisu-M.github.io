@@ -136,6 +136,14 @@
 	flex-direction: row;
 }
 
+.window-content.stellaria {
+	max-width: 700px;
+}
+
+.window-content.geckoparty {
+	max-width: 800px;
+}
+
 .window-button.window-close {
 	cursor: pointer;
 	padding: 3px;
@@ -147,6 +155,7 @@
 .window.hidden {
 	display: none;
 }
+
 .image-grid {
 	display: grid;
 	grid-template-columns: repeat(3, auto); /* Three columns */
@@ -160,10 +169,12 @@
 	position: relative;
 	width: calc(100% ); /* Adjust for gap */
 	overflow: hidden;
+	aspect-ratio: 16/9;
 	border-radius: 6px;
   }
   
   .image-grid-item.big {
+	aspect-ratio: 16/9;
 	/* Set the bigger size for the first image */
 	grid-column: span 2; /* Span two columns */
 	grid-row: span 2; /* Span two rows */
@@ -172,16 +183,24 @@
   .image-grid-item img {
 	/* Ensure the image fills the grid item */
 	position: absolute;
+	aspect-ratio: 16/9;
 	width: 100%;
 	height: 100%;
 	object-fit: cover; /* Maintain aspect ratio and fill */
+  }
+  .screenshot {
+	border-radius: 6px;
   }
 
 iframe {
 	aspect-ratio: 16/9;
 	width: 100%;
 	border-radius: 8px;
+	max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .button {
 	margin: 5px;
@@ -287,6 +306,10 @@ a {
 a:hover {
 	cursor: pointer;
 	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--border-color);
 }
 
 .flex-array {
