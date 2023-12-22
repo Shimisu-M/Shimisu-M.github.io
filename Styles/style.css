@@ -14,6 +14,7 @@
 
 
 .window {
+	z-index: auto;
 	-webkit-user-drag: element;
 	transform-origin: 50% 50%;
 	

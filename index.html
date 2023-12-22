@@ -620,6 +620,7 @@
 		dragElement(document.getElementById("daisysquest"));
 		dragElement(document.getElementById("defendthekingdom"));
 		dragElement(document.getElementById("ishikoridome"));
+		var lastZ = 10;
 
 		function dragElement(elmnt) {
 			var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -637,6 +638,8 @@
 				// get the mouse cursor position at startup:
 				pos3 = e.clientX;
 				pos4 = e.clientY;
+				lastZ++;
+				elmnt.style.zIndex = lastZ;
 				document.onmouseup = closeDragElement;
 				// call a function whenever the cursor moves:
 				document.onmousemove = elementDrag;
