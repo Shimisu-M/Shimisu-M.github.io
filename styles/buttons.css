@@ -1,0 +1,98 @@
+.button {
+	margin: 5px;
+	padding: 10px;
+	gap: 10px;
+
+	display: flex;
+	align-items: center;
+
+	height: 25px;
+	max-width: 250px;
+
+	background-color: var(--background-color);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	color: var(--border-color);
+	border: 2px solid;
+	border-radius: 8px;
+	font-weight: bold;
+
+	box-shadow: 0px 0px;
+
+	transform: translate(0px, 0px);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+	cursor: pointer;
+	
+}
+
+.button.popout:hover {
+	box-shadow: 8px 8px;
+	transform: translate(-8px, -8px);
+}
+
+.icon.button {
+	height: 25px;
+	width: 25px;
+	max-width: 25px;
+	text-align: center;
+}
+
+/** Specifics buttons settings **/
+
+.github.popout  {
+	color: black;
+	background-color: #00000010;
+}
+
+.itchio.popout {
+	color: var(--itchio-color);
+	background-color: var(--itchio-color-alpha);
+}
+
+.linkedin.popout {
+	color: var(--linkedin-color);
+	background-color: var(--linkedin-color-alpha);
+}
+
+.instagram.popout {
+	color: var(--instagram-color);
+	background-color: var(--instagram-color-alpha);
+}
+
+.twitter.popout {
+	color: var(--twitter-color);
+	background-color: var(--twitter-color-alpha);
+}
+
+.discord.popout {
+	color: var(--discord-color);
+	background-color: var(--discord-color-alpha);
+}
+
+.mail.popout {
+	color: var(--mail-color);
+	background-color: var(--mail-color-alpha);
+}
+
+.escaunes.popout {
+	color: var(--escaunes-color);
+	background-color: var(--escaunes-color-alpha);
+}
+
+.beerylis.popout {
+	color: var(--beerylis-color);
+	background-color: var(--beerylis-color-alpha);
+}
+
+.ignite.popout {
+	color: var(--ignite-color);
+	background-color: var(--ignite-color-alpha);
+}
+
+.pyrite.popout {
+	color: var(--pyrite-color);
+	background-color: var(--pyrite-color-alpha);
+}

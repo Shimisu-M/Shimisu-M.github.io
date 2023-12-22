@@ -1,0 +1,150 @@
+.window {
+	z-index: auto;
+	-webkit-user-drag: element;
+	transform-origin: 50% 50%;
+	
+	display: flex;
+	flex-direction: column;
+
+	resize: none;
+
+	color: var(--border-color);
+	background-color: transparent;
+
+
+	max-height: 0px;
+	min-height: 0px;
+	min-width: 0px;
+	position: absolute;
+	z-index: 9;
+
+	border: 2px solid;
+	box-shadow: transparent;
+	border-color: transparent;
+	border-radius: 8px;
+
+	box-shadow: 8px 8px 0px transparent;
+	padding: 0;
+
+	transition: 
+			max-height 0.3s ease-in-out, 
+			max-width 0.3s ease-in-out,
+			min-height 0.3s ease-in-out, 
+			box-border 0.3s ease-in-out, 
+			border-color 0.5s ease-in, 
+			background-color 0.3s ease-in-out, 
+			border-radius 0.3s ease-in-out; 
+
+	overflow: hidden;
+}
+
+.window.active {
+	min-width: 20ch;
+	min-height: 100px;
+	background-color: var(--window-color);
+	border-color: var(--border-color);
+	box-shadow: 8px 8px 0px var(--shadow-color);
+	max-height: 1000px;
+	border-radius: 8px;
+	max-width: 1000px;
+	display: flex;
+	
+	transition: 
+			max-height 0.3s ease-in-out, 
+			max-width 0.3s ease-in-out,
+			min-height 0.3s ease-in-out, 
+			box-border 0.3s ease-in-out, 
+			border-color 0.1s ease-in, 
+			background-color 0.3s ease-in-out, 
+			border-radius 0.3s ease-in-out; 
+}
+
+
+.window-header {
+	padding-left: 10px;
+	background-color: var(--header);
+	display: flex;
+	cursor: move;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--border-color);
+}
+
+.window-title {
+	font-weight: bold;
+	margin: 2px;
+	align-self: flex-start;
+	display: block;
+	width: fit-content;
+}
+
+.window-button.window-close {
+	cursor: pointer;
+	padding: 3px;
+	border-left: 2px solid var(--border-color);
+	border-top-right-radius: 6px;
+	background-color: rgb(207, 72, 88);
+}
+
+.window.hidden {
+	display: none;
+}
+
+.window-content {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 7px;
+	padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	max-height: 80vh;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	max-width: 60ch;
+}
+
+.window-content::-webkit-scrollbar {
+	width: 5px;
+}
+  
+.window-content::-webkit-scrollbar-track {
+	border-top: 10px solid transparent; 
+	border-bottom: 10px solid transparent; 
+	background-color: transparent;
+}
+  
+.window-content::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	padding: 10px;
+	background: var(--header);
+}
+  
+.window-content::-webkit-scrollbar-thumb:hover {
+	background: var(--border-color);
+}
+
+/** Specifics windows settings **/
+
+
+.window-content.socials {
+	flex-direction: row;
+}
+
+.window-content.stellaria {
+	max-width: 700px;
+}
+
+.window-content.hydreomiel {
+	max-width: 650px;
+}
+
+.window-content.defendthekingdom {
+	max-width: 700px;
+}
+
+.window-content.geckoparty {
+	max-width: 800px;
+}
