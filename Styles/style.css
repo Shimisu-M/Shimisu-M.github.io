@@ -79,10 +79,14 @@ a:visited {
 	flood-color: var(--border-color);
 }
 
+p {
+	max-width: 70ch;
+	margin-top: 0px;
+}
+
 body {
 	
 	background-color: var(--background-white-color);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: var(--border-color);
 	display: flex;
 	align-items: center;

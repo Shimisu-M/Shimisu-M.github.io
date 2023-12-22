@@ -1,7 +1,10 @@
 <head>
 	<title>Hugo Michel | Sumishi</title>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="Styles/fonts.css">
 
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
 	<link rel="stylesheet" type="text/css" href="Styles/windows.css">
@@ -17,33 +20,33 @@
 		<div class="accordion-item">
 			About me
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('about'); Show('aboutprojects')">Me</a>
+				<a class="button popout title" onclick="Show('about'); Show('aboutprojects')">Me</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('socials')">Socials</a>
+				<a class="button popout title" onclick="Show('socials')">Socials</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('contact')">Contact</a>
+				<a class="button popout title" onclick="Show('contact')">Contact</a>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			Programming
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('skills')">My skills</a>
+				<a class="button popout title" onclick="Show('skills')">My skills</a>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			My projects
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('ignite')">Ignite</a>
+				<a class="button popout title" onclick="Show('ignite')">Ignite</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('pyrite')">Pyrite Engine</a>
+				<a class="button popout title" onclick="Show('pyrite')">Pyrite Engine</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('beerylis')">Beerylis</a>
+				<a class="button popout title" onclick="Show('beerylis')">Beerylis</a>
 			</div>
 			<!--
 			<div class="hover-box accordion-content">
@@ -55,19 +58,19 @@
 		<div class="accordion-item">
 			Projects I've worked on
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('geckoparty')">Gecko Party</a>
+				<a class="button popout title" onclick="Show('geckoparty')">Gecko Party</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('stellaria')">Stellaria</a>
+				<a class="button popout title" onclick="Show('stellaria')">Stellaria</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('hydreomiel')">Hydre'O'Miel</a>
+				<a class="button popout title" onclick="Show('hydreomiel')">Hydre'O'Miel</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('daisysquest')">Daisy's Quest</a>
+				<a class="button popout title" onclick="Show('daisysquest')">Daisy's Quest</a>
 			</div>
 			<div class="hover-box accordion-content">
-				<a class="button popout" onclick="Show('defendthekingdom')">Defend The
+				<a class="button popout title" onclick="Show('defendthekingdom')">Defend The
 					Kingdom</a>
 			</div>
 			<div class="hover-box accordion-content">
@@ -87,7 +90,8 @@
 		</div>
 
 		<div class="window-content about">
-			<p>Time at my place : <span id="datetime"></span><br><br>
+			<p>
+				Time at my place : <span id="datetime"></span><br><br>
 				<!-- programming -->
 				Hi! I'm Hugo Michel - AKA Sumishi, I'm 21.<br>
 				I'm a french video game programmer, mainly interested in game engine programming, tools and procedural
@@ -121,19 +125,21 @@
 		</div>
 
 		<div class="window-content about">
-			I like having some variety on what task I can do at a given moment, that's why I have multiples projects
-			running at once.<br><br>
-			<div class="flex-array">
-				<div class="hover-box" title="Pyrite">
-					<a class="button popout pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
+			<p>
+				I like having some variety on what task I can do at a given moment, that's why I have multiples projects
+				running at once.
+			</p>
+				<div class="flex-array">
+					<div class="hover-box" title="Pyrite">
+						<a class="button popout pyrite" onclick="Show('pyrite')">Pyrite Engine</a>
+					</div>
+					<div class="hover-box" title="Beerylis">
+						<a class="button popout beerylis" onclick="Show('beerylis')">Beerylis</a>
+					</div>
+					<div class="hover-box" title="Ignite">
+						<a class="button popout ignite" onclick="Show('ignite')">Ignite EC Framework</a>
+					</div>
 				</div>
-				<div class="hover-box" title="Beerylis">
-					<a class="button popout beerylis" onclick="Show('beerylis')">Beerylis</a>
-				</div>
-				<div class="hover-box" title="Ignite">
-					<a class="button popout ignite" onclick="Show('ignite')">Ignite EC Framework</a>
-				</div>
-			</div>
 		</div>
 	</div>
 
@@ -255,18 +261,18 @@
 
 		<div class="window-content beerylis">
 			<div><strong>Work in progress ...</strong></div>
-			<div>
+			<p>
 				Beerylis is a <strong>beekeeping management software</strong> originally made for my father.
 				Then I realized it would be a usefull tool for other beekeepers and started working on it to make the
 				best software I can.
-			</div>
-			<div>
+			</p>
+			<p>
 				The software is made in <strong>C# HTML and CSS</strong> with the frameworks <strong>.NET MAUI</strong>
 				and <strong>ASP.NETBlazor</strong>.
-			</div>
-			<div>
+			</p>
+			<p>
 				Here are the links to the project and my father website.
-			</div>
+			</p>
 			<!-- Beerylis website link -->
 			<div class="hover-box" title="WIP - Beerylis">
 				<a class="button popout beerylis" target="_blank">
@@ -296,11 +302,11 @@
 
 		<div class="window-content ignite">
 			<div><strong>Work in progress ...</strong></div>
-			<div>
+			<p>
 				Ignite is a <strong>C# Entity-Component framework (EC)</strong> I'm making for
 				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br>
 				<em>Note : It isn't an ECS framework, also I'll make one at some point</em><br>
-			</div>
+			</p>
 			<div>Here is the GitHub repository if you are interested in it.</div>
 
 			<!-- Ignite github repo link-->
@@ -324,10 +330,10 @@
 
 		<div class="window-content pyrite">
 			<div><strong>Work in progress ...</strong></div>
-			<div>
+			<p>
 				Pyrite is a <strong>C# game engine</strong> I'm making my final project at Creajeux.<br>
 				It implement my EC framework <a onclick="Show('ignite')"><strong> Ignite</strong></a><br>
-			</div>
+			</p>
 			<div>Here is the GitHub repository if you are interested in it.</div>
 
 			<div class="hover-box" title="Pyrite repository">
@@ -349,11 +355,11 @@
 		</div>
 
 		<div class="window-content snake">
-			<div>
+			<p>
 				This is a Snake game remake for a <strong>class project</strong> I made during my first year at
 				Creajeux.
 				I made this game in 2 weeks in <strong>Lua</strong> using the framework <strong>LOVE 2D</strong>.
-			</div>
+			</p>
 			<div>
 				If you want to give it a try, here is the Itch.io :D
 			</div>
@@ -386,15 +392,14 @@
 					<strong>2 months</strong></span>
 			</div>
 
-			<div>
+			<p>
 				Gecko Party is a local multiplayer party game made with Unity featuring 8 minigames and a large lobby to
 				explore !<br>
 	
 				On this project, I worked on the project architecture and core systems, 2 out of the 8 minigames and a major
 				part of the GUI.<br>
-			</div>
+			</p>
 			
-			<br>
 			<iframe src="https://www.youtube.com/embed/X39tJUiFqlo" frameborder="0" allowfullscreen></iframe>
 			<br>
 			<strong>Some screenshots !</strong>
@@ -430,14 +435,13 @@
 					<strong>3 months</strong></span>
 			</div>
 
-			<div>
+			<p>
 				Stellaria is a <strong>2D sandbox platformer</strong> game inspired of <strong>Terraria</strong> and
 				<strong>Starbound</strong> made in <strong>C++</strong> using <strong>SFML</strong>.<br>
 				On this project, I worked on the project architecture and the world system from the tiles datas to the
 				procedural generation and rendering.
-			</div>
+			</p>
 
-			<br>
 			<iframe src="https://www.youtube.com/embed/ji3UeEr6V-A" frameborder="0" allowfullscreen></iframe>
 			<br>
 			<strong>Some screenshots !</strong>
@@ -468,14 +472,13 @@
 					<strong>1 months</strong></span>
 			</div>
 			
-			<div>
+			<p>
 				Hydre'O'Miel is a <strong>card game</strong> made in <strong>C++</strong> using the
 				<strong>SFML</strong> graphic library<br>
 				On this project, I worked on the game architecture and game design, I also worked on some animations and
 				feedbacks.
-			</div>
+			</p>
 
-			<br>
 			<strong>Some screenshots !</strong>
 			<div class="image-grid">
 				<img class="image-grid-item" src="images/HOM1.png" alt="Screenshot 1" >
@@ -503,13 +506,12 @@
 				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
 					<strong>3 months</strong></span>
 			</div>
-			<div>
+			<p>
 				Daisy's Quest is a <strong>RPG</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
 				On this project, I worked on the map, loading/unloading, imports from Tiled, animated tiles, and level design.
 				I also made some gameplay with the creation of the last boss and the AI of the goblin.<br><br>
-			</div>
+			</p>
 
-			<br>
 			<strong>Some screenshots !</strong>
 			<div class="image-grid">
 				<img class="image-grid-item big" src="images/DQ3.png" alt="Screenshot 3" >
@@ -537,12 +539,11 @@
 				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
 					<strong>2 weeks</strong></span>
 			</div>
-			<div>
+			<p>
 				Defend the Kingdom is a <strong>Tower defense</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
 				On this project, I worked on the map system, with tower placement and upgrades, imports from Tiled and level design.
-			</div>
+			</p>
 			
-			<br>
 			<strong>Some screenshots !</strong>
 			<div class="image-grid">
 				<img class="image-grid-item" src="images/DTK1.png" alt="Screenshot 1" >
@@ -570,10 +571,10 @@
 				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
 					<strong>2 weeks</strong></span>
 			</div>
-			<div>
+			<p>
 				Le disciple d'Ishikori-Dome is a <strong>Roguelike</strong> game made in <strong>Lua</strong> using <strong>LOVE2D</strong>.<br>
 				On this project, I worked on the map system, with the collision system and the procedural generation. I also did some gameplay with the boss AI.
-			</div>
+			</p>
 		</div>
 	</div>
 
@@ -587,6 +588,7 @@
 			var element = document.getElementById(id);
 			if (!element.classList.contains('active'))
 				element.classList.add('active');
+			element.style.zIndex = lastZ;
 		}
 	</script>
 	<script>
