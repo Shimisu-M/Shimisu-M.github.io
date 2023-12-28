@@ -1,0 +1,97 @@
+* {
+	scroll-behavior: smooth;	
+
+	--border-color: #5a5c90;
+	--shadow-color: #5a5c9054;
+	--header: #B1B2FF;
+	--button: #AAC4FF;
+	--sub-header: #D2DAFF;
+	--background-color: #EEF1FF;
+	--background-white-color: rgb(241, 237, 243);
+	--window-color: #f8f8f8;
+
+	--instagram-color: rgba(255,0,168,1);
+	--instagram-color-alpha : rgba(255,0,168,.1);
+
+	--linkedin-color: #007EBB;
+	--linkedin-color-alpha: #007EBB10;
+
+	--discord-color: #5865F2;
+	--discord-color-alpha: #5865F210;
+
+	--itchio-color: #FA5C5C;
+	--itchio-color-alpha: #FA5C5C10;
+
+	--twitter-color: #000000;
+	--twitter-color-alpha: #00000010;
+
+	--github-color: #000000;
+	--github-color-alpha: #00000010;
+
+	--mail-color: #FF0000;
+	--mail-color-alpha: #FF000010;
+
+	--escaunes-color: #FFAA02;
+	--escaunes-color-alpha: #FFAA0210;
+
+	--beerylis-color: #eec623;
+	--beerylis-color-alpha: #eec62310;
+
+	--ignite-color: #f38f59;
+	--ignite-color-alpha: #f38f5910;
+
+	--pyrite-color: #c4aa52;
+	--pyrite-color-alpha: #c4aa5210;
+}
+
+iframe {
+	aspect-ratio: 16/9;
+	width: 100%;
+	border-radius: 8px;
+	max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--border-color);
+}
+
+.flex-array {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	vertical-align: middle;
+	
+}
+
+.small-icon {
+	color: var(--border-color);
+	flood-color: var(--border-color);
+}
+
+p {
+	max-width: 70ch;
+	margin-top: 0px;
+}
+
+body {
+	
+	background-color: var(--background-white-color);
+	color: var(--border-color);
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	height: 100vh;
+	margin: 0;
+	scroll-behavior: smooth;
+}
