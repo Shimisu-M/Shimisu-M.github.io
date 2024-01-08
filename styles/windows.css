@@ -63,6 +63,7 @@
 
 
 .window-header {
+	height: 26px;
 	padding-left: 10px;
 	background-color: var(--header);
 	display: flex;
