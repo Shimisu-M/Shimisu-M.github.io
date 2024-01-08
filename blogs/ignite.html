@@ -26,40 +26,43 @@
     <body class="centered blog">
 
         <div class="blog-title">
-            Ignite ECS
+            Ignite ECS Framework
         </div>
         <p>
-            Ignite is a basic C# Entity Component System (ECS) framework. At it's core, it uses Nodes which are entities,
+            Ignite is a basic C# Entity Component System (ECS) framework. At it's core, it uses Nodes which are
+            entities,
             Components and Systems.
         </p>
+
+        <div id="nodes" class="chapter-title">
+            <a href="ignite.html#nodes">Nodes</a>
+        </div>
         <p>
-            <a id="nodes" class="chapter-title" href="ignite.html#nodes"><strong>Nodes</strong></a>
-        </p>
-        <p>
-            A node is an object represented by it's id. In Ignite, nodes also act as components containers, each node
-            containing it's components.
+            A node is an object represented by it's id existing in a world. In Ignite, nodes also act as components
+            containers, each node
+            containing it's components. We can also create a hierarchy for nodes to help us organize our projects.
         </p>
 
-        <p>
-            <a id="components" class="chapter-title" href="ignite.html#components"><strong>Components</strong></a>
-        </p>
+        <div id="components" class="chapter-title">
+            <a href="ignite.html#components">Components</a>
+        </div>
         <p>
             A component is a datatype that can be added to or removed from nodes.
             Components in ECS are generally plain data types and not encapsulated and Ignite is no exception.
         </p>
 
+        <div id="systems" class="chapter-title">
+            <a href="ignite.html#systems">Systems</a>
+        </div>
         <p>
-            <a id="systems" class="chapter-title" href="ignite.html#systems"><strong>Systems</strong></a>
-        </p>
-        <p>
-            A system is an executable object that is matched with all nodes that have a certain set of components.
-            Nodes are registered in a system with a filter set to the system.
-            Then at runtime, every nodes with matching components will be registerd in the system.
+            A system is an executable object that is matched with all nodes that have a certain set of components using
+            a filter. At runtime, every nodes with matching components will be registerd in the system. The system will
+            then execute some code we've made for each nodes registered.
         </p>
 
-        <p>
-            <a id="worlds" class="chapter-title" href="ignite.html#worlds"><strong>Worlds</strong></a>
-        </p>
+        <div id="worlds" class="chapter-title">
+            <a href="ignite.html#worlds">Worlds</a>
+        </div>
         <p>
             A world is where all ECS data is stored. In Ignite we can have multiple worlds which can communicate with
             each. This allow us to dissociate data and logic through multiple environnements.
