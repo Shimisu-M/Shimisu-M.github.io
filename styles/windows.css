@@ -1,5 +1,3 @@
-@import url("style.css");
-
 .window {
 	z-index: auto;
 	-webkit-user-drag: element;

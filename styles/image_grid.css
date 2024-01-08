@@ -1,5 +1,3 @@
-@import url("style.css");
-
 .image-grid {
 	display: grid;
 	grid-template-columns: repeat(3, auto); /* Three columns */
