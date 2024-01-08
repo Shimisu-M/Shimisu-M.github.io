@@ -1,0 +1,19 @@
+@import url("style.css");
+
+.blog-title {
+    margin-top: 5em;
+    margin-bottom: 1em;
+    font-family: 'Garet', sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.chapter-title > * {
+    font-family: 'Garet', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.blog {
+    font-size: large;
+}
