@@ -29,9 +29,7 @@
             Ignite ECS Framework
         </div>
         <p>
-            Ignite is a basic C# Entity Component System (ECS) framework. At it's core, it uses Nodes which are
-            entities,
-            Components and Systems.
+            Ignite is a basic C# Entity Component System (ECS) framework.
         </p>
 
         <div id="nodes" class="chapter-title">
@@ -39,8 +37,23 @@
         </div>
         <p>
             A node is an object represented by it's id existing in a world. In Ignite, nodes also act as components
-            containers, each node
-            containing it's components. We can also create a hierarchy for nodes to help us organize our projects.
+            containers, each node containing it's components. We can also create a hierarchy for nodes to help us
+            organize our projects.<br>
+            In Ignite, the nodes ids works in a bit of a strange way, they are coded on a 64 bytes unsigned integer
+            which is split if 3 segments
+        </p>
+        <ul>
+            <li>The first 32 bytes represent the node id.</li>
+            <li>Then the next 16 bytes represent the node generation.</li>
+            <li>And the last 16 bytes are used as flags to help us know the state of the node.</li>
+        </ul>
+        <p>
+            This allow us to have 2<sup>48</sup> different ids in addition to let us query for nodes with certain
+            flags.<br>
+            This method come from <strong><a
+                    href="https://ajmmertens.medium.com/doing-a-lot-with-a-little-ecs-identifiers-25a72bd2647"
+                    target="_blank">this post</a></strong> from <strong>Sander Mertens</strong> the creator of <strong><a
+                    href="https://github.com/SanderMertens/flecs" target="_blank">Flecs</a></strong>.
         </p>
 
         <div id="components" class="chapter-title">
