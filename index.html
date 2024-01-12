@@ -308,7 +308,7 @@
 	</div>
 
 	<!-- Ignite -->
-	<div class="window" id="ignite" title="Ignite" style="top: 665px; left: 435px;">
+	<div class="window" id="ignite" title="Ignite" style="top: 465px; left: 635px;">
 		<div class="window-header" id="igniteheader">
 			<div class="window-title">Ignite EC Framework</div>
 			<div onclick="Hide('ignite')">
@@ -319,9 +319,8 @@
 		<div class="window-content ignite">
 			<div><strong>Work in progress ...</strong></div>
 			<p>
-				Ignite is a <strong>C# Entity-Component framework (EC)</strong> I'm making for
-				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br>
-				<em>Note : It isn't an ECS framework, also I'll make one at some point</em><br>
+				Ignite is a <strong>C# ECS Framework</strong> I'm making for
+				<a onclick="Show('pyrite')"><strong> Pyrite</strong></a><br>.
 			</p>
 			<div>Here is the GitHub repository if you are interested in it.</div>
 
@@ -696,6 +695,8 @@
 
 			function closeDragElement() {
 				// stop moving when mouse button is released:
+				if(elmnt.style.top < 0 + "px")
+				elmnt.style.top = 0 + "px"
 				document.onmouseup = null;
 				document.onmousemove = null;
 			}
