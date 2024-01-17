@@ -39,7 +39,7 @@
 }
 
 .window.active {
-	min-width: 20ch;
+	min-width: 34ch;
 	min-height: 100px;
 	background-color: var(--window-color);
 	border-color: var(--border-color);
@@ -130,7 +130,7 @@
 /** Specifics windows settings **/
 
 .window-content.socials {
-	flex-direction: row;
+	width: 34ch;
 }
 
 .window-content.skills {
