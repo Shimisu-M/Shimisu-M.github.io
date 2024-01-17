@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="styles/windows.css">
 	<link rel="stylesheet" href="styles/buttons.css">
 	<link rel="stylesheet" href="styles/image_grid.css">
+	<link rel="stylesheet" href="styles/popup.css">
 </head>
 
 
@@ -26,17 +27,13 @@
 				<a class="button popout title" onclick="Show('about'); Show('aboutprojects')">Me</a>
 			</div>
 			<div class="hover-box accordion-content">
+				<a class="button popout title" onclick="Show('skills')">My skills</a>
+			</div>
+			<div class="hover-box accordion-content">
 				<a class="button popout title" onclick="Show('socials')">Socials</a>
 			</div>
 			<div class="hover-box accordion-content">
 				<a class="button popout title" onclick="Show('contact')">Contact</a>
-			</div>
-		</div>
-
-		<div class="accordion-item">
-			Programming
-			<div class="hover-box accordion-content">
-				<a class="button popout title" onclick="Show('skills')">My skills</a>
 			</div>
 		</div>
 
@@ -55,7 +52,7 @@
 		<div class="accordion-item">
 			My projects
 			<div class="hover-box accordion-content">
-				<a class="button popout title" onclick="Show('ignite')">Ignite ECS</a>
+				<a class="button popout title" onclick="Show('ignite')">Ignite ECS Framework</a>
 			</div>
 			<div class="hover-box accordion-content">
 				<a class="button popout title" onclick="Show('pyrite')">Pyrite Engine</a>
@@ -110,17 +107,15 @@
 				<!-- programming -->
 				Hi! I'm Hugo Michel - AKA Sumishi, I'm 21.<br>
 				I'm a french video game programmer, mainly interested in game engine programming, tools and procedural
-				generation but I also love to experimenting all kinds of stuffs for fun or just out of
-				curiosity.<br><br>
+				generation but I also love to experimenting all kinds of stuffs retated to programming for fun or just
+				out of curiosity.<br><br>
 
 				I started programming in 2020 at Creajeux and never stopped since. During my study, I made several cool
 				projects, alone or with a team, last one being <a onclick="Show('geckoparty')"><strong>Gecko
 						Party</strong></a>.<br><br>
 
 				Most of my projects are available on <a href="https://github.com/SumishiM"
-					target="_blank"><strong>GitHub</strong></a> if you
-				want to
-				check<br><br>
+					target="_blank"><strong>GitHub</strong></a> if you want to check<br><br>
 
 				<!-- hobbies -->
 				I enjoy playing video games, my favorite genre being 2D platformers, no matter the difficulty.<br>
@@ -186,17 +181,19 @@
 				</a>
 			</div>
 			<div class="hover-box" title="Instagram">
-				<a class="button popout icon instagram" target="_blank">
+				<a class="button popout icon instagram" href="https://www.instagram.com/hgo_michl?igsh=amsydGlsMXlvdGlm"
+					target="_blank">
 					<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
 				</a>
 			</div>
-			<div class="hover-box" title="Twitter">
+			<!--<div class="hover-box" title="Twitter">
 				<a class="button popout icon twitter" target="_blank">
 					<img src="images/twitter.png" alt="Twitter" width="25" height="25" />
 				</a>
-			</div>
+			</div>-->
 			<div class="hover-box" title="Discord">
-				<a class="button popout icon discord" target="_blank">
+				<a class="button popout icon discord" href="https://discord.com/users/286171790349303809"
+					target="_blank">
 					<img src="images/discord.png" alt="Discord" width="25" height="25" />
 				</a>
 			</div>
@@ -204,7 +201,7 @@
 	</div>
 
 	<!-- Contact -->
-	<div class="window" id="contact" title="Contact" style="top: 190px; left: 1200px; max-width: 300px">
+	<div class="window" id="contact" title="Contact" style="top: 190px; left: 1220px; max-width: 300px">
 		<div class="window-header" id="contactheader">
 			<div class="window-title">Contact me</div>
 			<div onclick="Hide('contact')">
@@ -229,7 +226,8 @@
 				</a>
 			</div>
 			<div class="hover-box" title="Instagram">
-				<a class="button popout instagram" target="_blank">
+				<a class="button popout instagram" href="https://www.instagram.com/hgo_michl?igsh=amsydGlsMXlvdGlm"
+					target="_blank">
 					<img src="images/instagram.png" alt="Instagram" width="25" height="25" />
 					Instagram
 				</a>
@@ -239,7 +237,7 @@
 	</div>
 
 	<!-- Skills -->
-	<div class="window" id="skills" title="My skills" style="top: 200px; left: 250px;">
+	<div class="window active" id="skills" title="My skills" style="top: 490px; left: 160px;">
 		<div class="window-header" id="skillsheader">
 			<div class="window-title">My skills</div>
 			<div onclick="Hide('skills')">
@@ -247,21 +245,93 @@
 			</div>
 		</div>
 
-		<div class="window-content skills">
-			<div>
-				Programming languages :<br>
-				<!-- Use images with tooltip -->
-				C++ / C# / Lua / HTML / CSS
+		<div class="window-content">
+			Since I started programming, I learned several programming languages such as :
+			<div class="flex-array">
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">C#</span>
+					<a class="image-icon icon cs">
+						<img src="images/cs.png" alt="C#" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">C++</span>
+					<a class="image-icon icon cpp">
+						<img src="images/cpp.png" alt="C++" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">Lua</span>
+					<a class="image-icon icon lua">
+						<img src="images/lua.png" alt="Lua" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">Rust</span>
+					<a class="image-icon icon rust">
+						<img src="images/rust.png" alt="Rust" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">HTML</span>
+					<a class="image-icon icon html">
+						<img src="images/html.png" alt="HTML" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">CSS</span>
+					<a class="image-icon icon css">
+						<img src="images/css.png" alt="CSS" width="35" height="35" />
+					</a>
+				</div>
 			</div>
 			<div>
-				Game engines :<br>
-				<!-- Use images with tooltip -->
-				Unreal Engine 5 / Unity / Godot
+				I also learned to work on those game engines :<br>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">Unreal Engine</span>
+					<a class="image-icon icon unreal">
+						<img src="images/unreal.png" alt="Unreal Engine" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">Unity</span>
+					<a class="image-icon icon unity">
+						<img src="images/unity.png" alt="Unity" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">Godot</span>
+					<a class="image-icon icon godot">
+						<img src="images/godot.png" alt="Godot" width="35" height="35" />
+					</a>
+				</div>
 			</div>
 			<div>
-				Frameworks :<br>
-				<!-- Use images with tooltip -->
-				.NET MAUI / ASP.NET Blazor / MonoGame / FNA
+				And I learned how to use those frameworks :<br>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">.NET MAUI</span>
+					<a class="image-icon icon maui">
+						<img src="images/maui.png" alt=".NET MAUI" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">ASP.NET Blazor</span>
+					<a class="image-icon icon blazor">
+						<img src="images/blazor.png" alt="ASP.NET Blazor" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">MonoGame</span>
+					<a class="image-icon icon monogame">
+						<img src="images/monogame.png" alt="MonoGame" width="35" height="35" />
+					</a>
+				</div>
+				<div class="hover-box tooltip">
+					<span class="tooltiptext">FNA</span>
+					<a class="image-icon icon fna">
+						<img src="images/fna.png" alt="FNA" width="35" height="35" />
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -695,8 +765,8 @@
 
 			function closeDragElement() {
 				// stop moving when mouse button is released:
-				if(elmnt.style.top < 0 + "px")
-				elmnt.style.top = 0 + "px"
+				if (elmnt.style.top < 0 + "px")
+					elmnt.style.top = 0 + "px"
 				document.onmouseup = null;
 				document.onmousemove = null;
 			}

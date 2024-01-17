@@ -44,6 +44,45 @@
 
 	--pyrite-color: #c4aa52;
 	--pyrite-color-alpha: #c4aa5210;
+
+	--cs-color: #A077DB;
+	--cs-color-alpha: #A077DB10;
+
+	--cpp-color: #659AD2;
+	--cpp-color-alpha: #659AD210;
+
+	--rust-color: #000;
+	--rust-color-alpha: #00000010;
+
+	--lua-color: #000080;
+	--lua-color-alpha: #00008010;
+
+	--html-color: #FF5722;
+	--html-color-alpha: #FF572210;
+
+	--css-color: #2299F8;
+	--css-color-alpha: #2299F810;
+
+	--unreal-color: #000;
+	--unreal-color-alpha: #00000010;
+
+	--unity-color: #000;
+	--unity-color-alpha: #00000010;
+
+	--godot-color: #478CBF;
+	--godot-color-alpha: #478CBF10;
+
+	--maui-color: #A213EC;
+	--maui-color-alpha: #A213EC10;
+
+	--blazor-color: #5C2D91;
+	--blazor-color-alpha: #5C2D9110;
+
+	--monogame-color: #E73C00;
+	--monogame-color-alpha: #E73C0010;
+
+	--fna-color: #8745EF;
+	--fna-color-alpha: #8745EF10;
 }
 
 iframe {

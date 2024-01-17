@@ -129,10 +129,10 @@
 
 /** Specifics windows settings **/
 
-
 .window-content.socials {
 	flex-direction: row;
 }
+
 
 .window-content.stellaria {
 	max-width: 700px;
