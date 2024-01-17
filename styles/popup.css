@@ -10,12 +10,13 @@
     background-color: black;
     color: var(--background-color);
     text-align: center;
+    justify-content: center;
     border-radius: 6px;
     padding: 5px 5px;
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    margin-left: 0px;
+    margin-left: -5px;
     margin-bottom: -25px;
   }
   
