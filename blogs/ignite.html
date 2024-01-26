@@ -29,31 +29,96 @@
             Ignite ECS Framework
         </div>
         <p>
-            Ignite is a basic C# Entity Component System (ECS) framework.
+            Ignite est une implementation simpliste d'Entity-Component-System (ECS) en C#.
         </p>
 
         <div id="nodes" class="chapter-title">
             <a href="ignite.html#nodes">Nodes</a>
         </div>
+
         <p>
-            A node is an object represented by it's id existing in a world. In Ignite, nodes also act as components
-            containers, each one containing it's own. We can also create a hierarchy for nodes to help us
-            organize our projects.<br>
-            In Ignite, the nodes ids works in a bit of a strange way, they are coded on a 64 bytes unsigned integer
-            which is split if 3 segments
+            Une node est un object réprésenté par une ID (ulong) en ECS. Dans Ignite, les
+            nodes sont aussi des conteneurs de composents et peuvent etre organisées dans une hierarchie de nodes.
+        </p>
+        <div class="code-block">
+            <pre><code>  
+    class Node
+    {
+        ulong ID;
+        Node Parent;
+        List&#60;Node&#62; Children;
+        List&#60;IComponent&#62; Components;
+    }
+            </code></pre>
+        </div>
+        <p>
+            On peut alors chercher les composents présents sur la node avec la fonction suivante :
+        </p>
+        <div class="code-block">
+            <pre><code>  
+    bool HasComponent&#60;T&#62;() where T : IComponent
+    {
+        for(var component in Components)
+        {
+            if (component.GetType() == typeof(T))
+                return true; // found a component of type T !
+        }
+        return false;
+    }
+            </code></pre>
+        </div>
+        <p>
+            Bien que fonctionnel, cette fonction en O(n) va devenit fortement inefficiente lors d'un grand nombre
+            d'itérations. Pour résoudre ce problème, il est plus simple de chercher un composent par son UID, pour cela,
+            il suffit de rajouter une liste des UID des composents présents sur la node.
+        </p>
+        <div class="code-block">
+            <pre><code>  
+    Hashset&#60;int&#62; ComponentIndex;
+            </code></pre>
+        </div>
+        <p>
+            Grace à çà, on va pouvoir simplifier notre fonction, la faisant passer de O(n) a O(1) :
+        </p>
+        <div class="code-block">
+            <pre><code>  
+    bool HasComponent(int index)
+    {
+        return ComponentIndex.Contains(index);
+    }
+            </code></pre>
+        </div>
+        <p>
+            Pour récuperer l'UID d'un composent, on utilise une <span><code>ComponentLookupTable</code></span> qui nous
+            permet de coupler un type avec une UID.
+        </p>
+        <div class="code-block">
+            <pre><code>  
+    class ComponentLookupTable
+    {
+        ImmutableDictionary&#60;Type, int&#62; ComponentIndex;
+
+        //Get ID from Type
+        int this[Type type] => ComponentIndex[type];
+    }
+            </code></pre>
+        </div>
+        <p>
+            Dans Ignite, les ID des nodes fonctionne d'une façon un peu étrange, elles sont codées sur un ulong de 64
+            octets divisé en 3 parties.
         </p>
         <ul>
             <li>The first 32 bytes represent the node id.</li>
             <li>Then the next 16 bytes represent the node generation.</li>
-            <li>And the last 16 bytes are used as flags to help us know the state of the node.</li>
+            <li>And the last 16 bytes are used as flags to help us manage the state of the node.</li>
         </ul>
         <p>
-            This allow us to have 2<sup>48</sup> different ids in addition to let us query for nodes with certain
+            This allow us to have 2<sup>48</sup> different IDs in addition to let us query for nodes with certain
             flags.<br>
             This method come from <strong><a
                     href="https://ajmmertens.medium.com/doing-a-lot-with-a-little-ecs-identifiers-25a72bd2647"
-                    target="_blank">this post</a></strong> from <strong>Sander Mertens</strong> the creator of <strong><a
-                    href="https://github.com/SanderMertens/flecs" target="_blank">Flecs</a></strong>.
+                    target="_blank">this post</a></strong> from <strong>Sander Mertens</strong> the creator of
+            <strong><a href="https://github.com/SanderMertens/flecs" target="_blank">Flecs</a></strong>.
         </p>
 
         <div id="components" class="chapter-title">
@@ -61,7 +126,8 @@
         </div>
         <p>
             A component is a datatype that can be added to or removed from nodes.
-            Components in ECS are generally plain data types and not encapsulated and Ignite is no exception.
+            Components in ECS are generally plain data types and not encapsulated and Ignite components are no
+            exception.
         </p>
 
         <div id="systems" class="chapter-title">

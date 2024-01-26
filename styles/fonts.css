@@ -46,3 +46,27 @@
     font-family: 'Garet', sans-serif;
     font-weight: bolder;
 }
+
+code {
+    font-family: "Consolas", monospace;
+    font-size: inherit;
+  }
+  
+  /* Code in text */
+  span > code,
+  p > code,
+  li > code,
+  dd > code,
+  td > code {
+    word-wrap: break-word;
+    background: #5a5c9050;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
+  }
+
+.code-block
+{
+    background: #5a5c9050;
+    border-radius: 4px;
+}
