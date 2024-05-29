@@ -37,17 +37,16 @@
 			</div>
 		</div>
 
-		<div class="accordion-item">
+		<!--<div class="accordion-item">
 			Blogs
 			<div class="hover-box accordion-content">
 				<a class="button popout title" href="https://sumishim.github.io/blogs/ignite">Ignite ECS</a>
 			</div>
-			<!--
+			
 			<div class="hover-box accordion-content">
 				<a class="button popout title" href="blogs/pyrite.html">Pyrite Engine</a>
 			</div>
-			-->
-		</div>
+		</div>-->
 
 		<div class="accordion-item">
 			My projects
@@ -69,6 +68,9 @@
 
 		<div class="accordion-item">
 			Projects I've worked on
+			<div class="hover-box accordion-content">
+				<a class="button popout title" onclick="Show('spectral')">Spectral</a>
+			</div>
 			<div class="hover-box accordion-content">
 				<a class="button popout title" onclick="Show('geckoparty')">Gecko Party</a>
 			</div>
@@ -112,7 +114,7 @@
 
 				J'ai commencé la programmation en 2020 a Creajeux et je n'ai jamais arrété. Pendant mes études j'ai
 				travaillé sur plusieurs projets, seul ou en groupe, le dernier étant
-				<a onclick="Show('geckoparty')"><strong>GeckoParty</strong></a>.<br><br>
+				<a onclick="Show('spectral')"><strong>Spectral</strong></a>.<br><br>
 
 				La majorité de mes projets solo sont disponible sur mon <a href="https://github.com/SumishiM"
 					target="_blank"><strong>GitHub</strong></a> si ça vois intéresse ! <br><br>
@@ -457,6 +459,36 @@
 		</div>
 	</div>
 
+	<!-- Spectral -->
+	<div class="window" id="spectral" title="Spectral" style="top: 370px; left: 830px;">
+		<div class="window-header" id="spectralheader">
+			<div class="window-title">Spectral</div>
+			<div onclick="Hide('spectral')">
+				<img class="window-button window-close" src="images/close.png" alt="Close" width="20" height="20" />
+			</div>
+		</div>
+
+		<div class="window-content spectral">
+			Réalisé durant ma 4ème année à Créajeux.
+
+			<div class="flex-array" style="gap:1.5em;">
+				<span><img class="small-icon" src="images/members.png" alt="Members" width="20" height="20" />
+					<strong>11</strong></span>
+				<span><img class="small-icon" src="images/duration.png" alt="Duration" width="20" height="20" />
+					<strong>2 months</strong></span>
+			</div>
+
+			<p>
+				Spectral est un Fast FPS en multijoueurs en ligne réalisé sur Unreal Engine 5.<br>
+				Sur ce projet, j'ai travaillé sur un systeme de déplacements fluides et dynamiques inspiré de Titanfall
+				2, j'ai également travaillé sur des VFX et des shaders.
+				<br>
+			</p>
+
+			<iframe src="https://www.youtube.com/embed/KJA0JYkZhkk" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
 	<!-- Gecko Party -->
 	<div class="window" id="geckoparty" title="Gecko Party" style="top: 370px; left: 830px;">
 		<div class="window-header" id="geckopartyheader">
@@ -660,7 +692,8 @@
 			</div>
 			<p>
 				Le disciple d'Ishikori-Dome est un Roguelike réalisé en Lua avec LÖVE2D.<br>
-				Sur ce projet, j'ai travaillé sur la génération du donjon, ainsi que le controller du joueur et l'IA du boss final.
+				Sur ce projet, j'ai travaillé sur la génération du donjon, ainsi que le controller du joueur et l'IA du
+				boss final.
 			</p>
 		</div>
 	</div>
@@ -707,6 +740,7 @@
 		dragElement(document.getElementById("pyrite"));
 		dragElement(document.getElementById("ignite"));
 		dragElement(document.getElementById("snake"));
+		dragElement(document.getElementById("spectral"));
 		dragElement(document.getElementById("geckoparty"));
 		dragElement(document.getElementById("stellaria"));
 		dragElement(document.getElementById("hydreomiel"));
